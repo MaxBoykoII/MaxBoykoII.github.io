@@ -1,0 +1,28 @@
+{
+  "name": "github-io",
+  "version": "1.0.0",
+  "description": "My GitHub page",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+     "dev": "lite-server -c config.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MaxBoykoII/MaxBoykoII.github.io.git"
+  },
+  "author": "Max Boyko <maxboykomax@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MaxBoykoII/MaxBoykoII.github.io/issues"
+  },
+  "homepage": "https://github.com/MaxBoykoII/MaxBoykoII.github.io#readme",
+  "devDependencies": {
+    "bower": "^1.7.9",
+    "gulp": "^3.9.1",
+    "gulp-inject": "^4.1.0",
+    "gulp-sass": "^2.3.2",
+    "lite-server": "^2.2.2",
+    "wiredep": "^4.0.0"
+  }
+}
