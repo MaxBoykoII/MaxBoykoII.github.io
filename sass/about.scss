@@ -1,0 +1,11 @@
+#profile {
+    width: 15em;
+    height: auto;
+    .ellipse {
+        display: block;
+        width: 5em;
+        height: auto;
+        float: left;
+        shape-outside: ellipse();
+    }
+}
