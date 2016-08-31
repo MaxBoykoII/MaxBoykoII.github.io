@@ -1,9 +1,18 @@
-#profile {
+#about .circle {
+  shape-outside: ellipse() content-box;
+  shape-margin: 2%;
+  margin: 2%;
   width: 15em;
-  height: auto; }
-  #profile .ellipse {
-    display: block;
-    width: 5em;
-    height: auto;
-    float: left;
-    shape-outside: ellipse(); }
+  height: 30em;
+  float: left; }
+
+#about img {
+  margin-right: 2%; }
+
+footer {
+  margin-top: 40px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #cecece; }
+  footer ul {
+    text-align: center; }
