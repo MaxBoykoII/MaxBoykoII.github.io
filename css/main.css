@@ -1,9 +1,12 @@
+#about h2 {
+  text-align: center; }
+
 #about .circle {
   shape-outside: ellipse() content-box;
   shape-margin: 2%;
   margin: 2%;
-  width: 15em;
-  height: 30em;
+  width: 10em;
+  height: 20em;
   float: left; }
 
 #about img {
@@ -15,4 +18,7 @@ footer {
   padding-bottom: 40px;
   background-color: #cecece; }
   footer ul {
+    text-align: center; }
+  footer strong {
+    display: block;
     text-align: center; }
