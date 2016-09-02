@@ -1,7 +1,9 @@
 #resume {
-    h2,
-    h3 {
+    h2 {
         text-align: center;
+    }
+    h3 {
+        text-align: left;
     }
     .nav-tabs> li {
         float: none;
@@ -17,7 +19,7 @@
     #front-end,
     #back-end,
     #miscellaneous,
-    #currently-learning{
+    #currently-learning {
         ul {
             margin-top: 1%;
             display: inline-block;

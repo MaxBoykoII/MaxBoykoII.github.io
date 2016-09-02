@@ -1,12 +1,15 @@
 body {
   font-family: font-awesome, sans-serif;
-  background: linear-gradient(#0143A3, #0273D4); }
+  background-color: #2c3840; }
 
 h1,
 h2,
 h3,
 a {
   font-family: "Oswald Regular", sans-serif; }
+
+h1, h2, h3 {
+  color: white; }
 
 #about h2 {
   text-align: center; }
@@ -22,9 +25,11 @@ a {
 #about img {
   margin-right: 2%; }
 
-#resume h2,
-#resume h3 {
+#resume h2 {
   text-align: center; }
+
+#resume h3 {
+  text-align: left; }
 
 #resume .nav-tabs > li {
   float: none;

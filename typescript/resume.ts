@@ -39,6 +39,7 @@ export const currentlyLearning = [
     'Unit Testing with Mocha and Sinon',
     'Integration Testing',
     'D3',
+    'Web Components',
     'CSS Shapes',
     'Flex Box',
     'C#',
