@@ -12,6 +12,21 @@
 #about img {
   margin-right: 2%; }
 
+#resume h2,
+#resume h3 {
+  text-align: center; }
+
+#resume .nav-tabs > li {
+  float: none;
+  display: inline-block;
+  *display: inline;
+  /* ie7 fix */
+  zoom: 1;
+  /* hasLayout ie7 trigger */ }
+
+#resume .nav-tabs {
+  text-align: center; }
+
 footer {
   margin-top: 40px;
   padding-top: 40px;
