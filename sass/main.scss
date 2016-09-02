@@ -1,9 +1,13 @@
 $font-stack: font-awesome, sans-serif;
-$header-font-stack: "Oswald Regular", sans-serif;
+$header-font-stack: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+$dark: #2C3E50;
+$light: #18BC9C;
+$bottom: #2c3e50;
 
 body {
     font-family: $font-stack;
-    background-color: #2c3840;
+    background-color: $light;
+    padding-top: 70px;
 }
 
 h1,
@@ -17,7 +21,7 @@ h1, h2, h3 {
     color: white;
 }
 
-
+@import "nav";
 @import "about";
 @import "resume";
 @import "footer";

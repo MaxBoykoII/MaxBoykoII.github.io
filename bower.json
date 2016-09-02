@@ -20,7 +20,8 @@
     "font-awesome": "^4.6.3",
     "lodash": "^4.15.0",
     "animate.css": "^3.5.2",
-    "wow": "wowjs#^1.1.2"
+    "wow": "wowjs#^1.1.2",
+    "animated-header": "^1.0.3"
   },
   "overrides": {
     "bootstrap": {
