@@ -2969,11 +2969,16 @@ interface JQuery {
      * @param obj A jQuery object to match elements against.
      */
     find(obj: JQuery): JQuery;
-
     /**
+     Make lists out of an array of strings
+     */
+    listify(arr: string[]): JQuery;    
+    /**
+     * 
      * Reduce the set of matched elements to the first in the set.
      */
     first(): JQuery;
+    
 
     /**
      * Reduce the set of matched elements to those that have a descendant that matches the selector or DOM element.

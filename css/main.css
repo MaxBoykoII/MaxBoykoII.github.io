@@ -1,3 +1,13 @@
+body {
+  font-family: font-awesome, sans-serif;
+  background: linear-gradient(#0143A3, #0273D4); }
+
+h1,
+h2,
+h3,
+a {
+  font-family: "Oswald Regular", sans-serif; }
+
 #about h2 {
   text-align: center; }
 
@@ -26,6 +36,13 @@
 
 #resume .nav-tabs {
   text-align: center; }
+
+#resume #front-end ul,
+#resume #back-end ul,
+#resume #miscellaneous ul,
+#resume #currently-learning ul {
+  margin-top: 1%;
+  display: inline-block; }
 
 footer {
   margin-top: 40px;

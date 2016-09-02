@@ -17,19 +17,20 @@
   ],
   "dependencies": {
     "bootstrap": "^3.3.7",
-    "font-awesome": "^4.6.3"
+    "font-awesome": "^4.6.3",
+    "lodash": "^4.15.0"
   },
-   "overrides": {
+  "overrides": {
     "bootstrap": {
       "main": [
-                "dist/js/bootstrap.min.js",
-                "dist/css/bootstrap.min.css"
-                ]
+        "dist/js/bootstrap.min.js",
+        "dist/css/bootstrap.min.css"
+      ]
     },
     "font-awesome": {
       "main": [
-                "css/font-awesome.min.css"
-                ]
+        "css/font-awesome.min.css"
+      ]
     }
   }
 }

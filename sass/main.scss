@@ -1,3 +1,17 @@
+$font-stack: font-awesome, sans-serif;
+$header-font-stack: "Oswald Regular", sans-serif;
+
+body {
+    font-family: $font-stack;
+}
+
+h1,
+h2,
+h3,
+a {
+    font-family: $header-font-stack;
+}
+
 @import "about";
 @import "resume";
 @import "footer";

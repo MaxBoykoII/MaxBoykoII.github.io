@@ -14,4 +14,13 @@
     .nav-tabs {
         text-align: center;
     }
+    #front-end,
+    #back-end,
+    #miscellaneous,
+    #currently-learning{
+        ul {
+            margin-top: 1%;
+            display: inline-block;
+        }
+    }
 }
