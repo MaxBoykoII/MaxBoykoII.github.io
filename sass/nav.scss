@@ -5,9 +5,15 @@
     transition: all 0.5s;
     text-transform: uppercase;
     font-weight: 700;
-    a {
+    a, button {
         color: white !important;
     }
+}
+
+.navbar-default .navbar-nav>.active>a,
+.navbar-default .navbar-nav>.active>a:focus,
+.navbar-default .navbar-nav>.active>a:hover {
+    background-color: #cab4b4 !important;
 }
 
 .animated-header-scroll {

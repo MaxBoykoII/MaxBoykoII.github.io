@@ -1,13 +1,13 @@
-$font-stack: font-awesome, sans-serif;
+$font-stack: Lato,'Helvetica Neue',Helvetica,Arial,sans-serif;
 $header-font-stack: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
 $dark: #2C3E50;
-$light: #18BC9C;
+$light: #91B0EA;
 $bottom: #2c3e50;
 
 body {
     font-family: $font-stack;
-    background-color: $light;
     padding-top: 70px;
+    position: relative;
 }
 
 h1,
@@ -18,7 +18,7 @@ a {
 }
 
 h1, h2, h3 {
-    color: white;
+    color: $dark;
 }
 
 @import "nav";

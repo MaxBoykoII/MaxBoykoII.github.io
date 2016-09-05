@@ -2969,9 +2969,15 @@ interface JQuery {
      * @param obj A jQuery object to match elements against.
      */
     find(obj: JQuery): JQuery;
+      /**
+     Add typing for scrollspy 
+     */
+     scrollspy(options: any): JQuery;
+
     /**
      Make lists out of an array of strings
      */
+    
     listify(arr: string[]): JQuery;    
     /**
      * 

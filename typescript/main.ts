@@ -8,6 +8,12 @@ import { listify } from './plugins/list.plugin';
 listify(jQuery)
 
 jQuery(document).ready(() => {
+    /* Add Bootstrap scrollspy */
+    $('body').scrollspy({
+        target:'.navbar',
+        offset: 160
+    });
+    
     /* Add about text */
     for (let paragraph of paragraphs) {
         jQuery('#about-text').append(jQuery(`<p>${paragraph}</p>`));
