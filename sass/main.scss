@@ -1,13 +1,20 @@
 $font-stack: Lato,'Helvetica Neue',Helvetica,Arial,sans-serif;
 $header-font-stack: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
 $dark: #2C3E50;
-$light: #91B0EA;
-$bottom: #2c3e50;
+$light: #d0dbe5;
+$dark-complement: #836548;
 
 body {
     font-family: $font-stack;
-    padding-top: 70px;
-    position: relative;
+    padding: 3.815em 1em 2em 2em;
+    @media (min-width: 768px) {
+        font-size: 18px;
+    }
+}
+
+p {
+    line-height: 1.5556;
+    margin-bottom: 1.5556em;
 }
 
 h1,
@@ -20,8 +27,23 @@ a {
 h1, h2, h3 {
     color: $dark;
 }
+h1 {
+     font-size: 1.953em;
+     font-weight: 500;
+}
+h2 {
+    font-size: 1.563em;
+    line-height: 1.9905em;
+    margin-top: 0.9952em;
+}
+h3 {
+    font-size: 1.25em;
+    line-height: 1.2444em;
+    margin-top: 1.2444em;
+}
 
 @import "nav";
+@import "header";
 @import "about";
 @import "resume";
 @import "footer";

@@ -1,4 +1,9 @@
+
+
 #resume {
+    font-size: 1.0000em;
+    line-height: 1.5556em;
+    margin-top: 1.5556em;
     h2 {
         text-align: center;
     }
@@ -15,14 +20,15 @@
     }
     .nav-tabs {
         text-align: center;
+        margin-top: 1.5556em;
     }
     #front-end,
     #back-end,
     #miscellaneous,
     #currently-learning {
         ul {
-            margin-top: 1%;
             display: inline-block;
+            margin-top: 1.5556em;
         }
     }
 }

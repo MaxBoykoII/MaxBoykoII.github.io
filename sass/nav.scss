@@ -1,19 +1,20 @@
 .navbar {
     padding: 15px 30px;
-    background-color: $bottom;
+    background-color: $dark;
     -webkit-transition: all 0.5s;
     transition: all 0.5s;
     text-transform: uppercase;
     font-weight: 700;
     a, button {
         color: white !important;
+        font-size: 1em;
     }
 }
 
 .navbar-default .navbar-nav>.active>a,
 .navbar-default .navbar-nav>.active>a:focus,
 .navbar-default .navbar-nav>.active>a:hover {
-    background-color: #cab4b4 !important;
+    background-color: $dark-complement !important;
 }
 
 .animated-header-scroll {
