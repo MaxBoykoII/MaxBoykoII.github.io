@@ -1,12 +1,14 @@
 $font-stack: Lato,'Helvetica Neue',Helvetica,Arial,sans-serif;
 $header-font-stack: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
 $dark: #2C3E50;
+$midtone: #7896b5;
 $light: #d0dbe5;
 $dark-complement: #836548;
+$light-complement: #CEC4BB;
 
 body {
     font-family: $font-stack;
-    padding: 3.815em 1em 2em 2em;
+    padding: 4*1.5556em 1em 2em 2em;
     @media (min-width: 768px) {
         font-size: 18px;
     }
@@ -14,7 +16,8 @@ body {
 
 p {
     line-height: 1.5556;
-    margin-bottom: 1.5556em;
+    margin-top: 1.5556em;
+    max-width: 886.6666px;
 }
 
 h1,

@@ -1,13 +1,14 @@
 body {
   font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  padding: 3.815em 1em 2em 2em; }
+  padding: 6.2224em 1em 2em 2em; }
   @media (min-width: 768px) {
     body {
       font-size: 18px; } }
 
 p {
   line-height: 1.5556;
-  margin-bottom: 1.5556em; }
+  margin-top: 1.5556em;
+  max-width: 886.6666px; }
 
 h1,
 h2,
@@ -57,7 +58,10 @@ h3 {
   text-align: center;
   line-height: 1.5930em;
   margin-top: 0.7965em;
-  position: relative; }
+  margin-bottom: 2.3895em; }
+  .intro-text p {
+    margin-left: auto;
+    margin-right: auto; }
 
 #about h2 {
   text-align: center; }
@@ -80,7 +84,7 @@ h3 {
   #resume h2 {
     text-align: center; }
   #resume h3 {
-    text-align: left; }
+    text-align: center; }
   #resume .nav-tabs > li {
     float: none;
     display: inline-block;
@@ -88,9 +92,14 @@ h3 {
     /* ie7 fix */
     zoom: 1;
     /* hasLayout ie7 trigger */ }
+    @media (max-width: 767px) {
+      #resume .nav-tabs > li {
+        display: block; } }
   #resume .nav-tabs {
     text-align: center;
     margin-top: 1.5556em; }
+    #resume .nav-tabs a {
+      color: #7896b5 !important; }
   #resume #front-end ul,
   #resume #back-end ul,
   #resume #miscellaneous ul,
@@ -104,9 +113,15 @@ footer {
   padding-bottom: 1.9444em;
   background-color: #d0dbe5;
   font-size: 0.8000em;
-  line-height: 1.9444em; }
+  line-height: 1.9444em;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  right: 0; }
   footer ul {
     text-align: center; }
   footer strong {
     display: block;
     text-align: center; }
+  footer .fa {
+    color: #2C3E50; }

@@ -5,11 +5,19 @@ footer {
     background-color: $light;
     font-size: 0.8000em;
     line-height: 1.9444em;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    right: 0;
+    
     ul {
         text-align: center;
     }
     strong {
         display: block;
         text-align: center;
+    }
+    .fa {
+        color: $dark;
     }
 }
