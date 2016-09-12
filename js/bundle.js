@@ -23,6 +23,12 @@ jQuery(document).ready(function () {
     jQuery('#freecodecamp').listify(resume_1.experienceFreeCodeCamp);
     jQuery('#ubc').append(jQuery('<h4>Bsc in Mathematics, conferred 05/2015</h4>'))
         .listify(resume_1.educationUBC);
+    jQuery('#freecodecamp-edu').append(jQuery('<h4> https://www.freecodecamp.com</h4>'))
+        .listify(resume_1.educationFreeCodeCamp);
+    jQuery('#codeschool').append(jQuery('<h4>https://www.codeschool.com/</h4>'))
+        .listify(resume_1.educationCodeSchool);
+    jQuery('#pluralsight').append(jQuery('<h4>https://www.pluralsight.com</h4>'))
+        .listify(resume_1.educationPluralSightAssements);
 });
 
 },{"./about":1,"./plugins/list.plugin":3,"./resume":4,"jquery":5}],3:[function(require,module,exports){
@@ -117,6 +123,43 @@ exports.educationUBC = [
     'Differential Equations',
     'Honours Advanced Calculus II',
     'Honours Advanced Calculus I'
+];
+exports.educationFreeCodeCamp = [
+    'Front End Development Certification, conferred 01/2016',
+    'Back End Development Certification, expected 09/2016',
+    'Data Visualization Certification, expected 10/2016'
+];
+exports.educationCodeSchool = [
+    'Front-end Foundations',
+    'Front-end Formations',
+    'CSS Cross-Country',
+    'Journey Into Mobile',
+    'Unmasking HTML Emails',
+    'Adventures in Web Animations',
+    'You, Me & SVG',
+    'Assembling Sass',
+    'The Elements of Web Design',
+    'ES2015: The Shape of JavaScript to Come',
+    'JavaScript Best Practices',
+    'Try jQuery',
+    'jQuery: The Return Flight',
+    'Accelerating Through Angular 2',
+    'Powering Up With React',
+    'Shaping up with Angular.js',
+    'Staying Sharp with Angular.js',
+    'Real-time Web with Node.js',
+    'Building Blocks of Express.js',
+    'Try Python',
+    'Flying Through Python',
+    'The Magical Marvels of MongoDB',
+    'Try Git',
+    'Git Real'
+];
+exports.educationPluralSightAssements = [
+    '<img class="img-responsive" src="https://pluralsight.imgix.net/paths/path-icons/javascript-36f5949a45.png?w=50" alt="JavaScript"/> &mdash; 199 • proficient • 80<sup>th</sup> percentile',
+    '<img class="img-responsive" src="https://pluralsight.imgix.net/paths/path-icons/html5-7ac65c8ec0.png?w=50" alt="HTML5"/> &mdash; 197 • proficient • 79<sup>th</sup> percentile',
+    '<img class="img-responsive" src="https://pluralsight.imgix.net/paths/path-icons/angular-14a0f6532f.png?w=50" alt="AngularJS"/> &mdash; 197 • proficient • 79<sup>th</sup> percentile',
+    '<img class="img-responsive" src="https://pluralsight.imgix.net/paths/path-icons/css-c9b214f0d7.png?w=50" alt="CSS"/> &mdash; 156 • proficient • 56<sup>th</sup> percentile'
 ];
 
 },{}],5:[function(require,module,exports){

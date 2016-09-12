@@ -7,7 +7,10 @@ import {
     currentlyLearning,
     experienceGoldMinerPulse,
     experienceFreeCodeCamp,
-    educationUBC
+    educationUBC,
+    educationFreeCodeCamp,
+    educationCodeSchool,
+    educationPluralSightAssements
 }
 from './resume';
 
@@ -36,5 +39,11 @@ jQuery(document).ready(() => {
     /* Add eduction at UBC, freeCodeCamp, Codeschool, and pluralsight */
     jQuery('#ubc').append(jQuery('<h4>Bsc in Mathematics, conferred 05/2015</h4>'))
                   .listify(educationUBC);
+    jQuery('#freecodecamp-edu').append(jQuery('<h4> https://www.freecodecamp.com</h4>'))
+                                .listify(educationFreeCodeCamp);
+    jQuery('#codeschool').append(jQuery('<h4>https://www.codeschool.com/</h4>'))
+                        .listify(educationCodeSchool);
+    jQuery('#pluralsight').append(jQuery('<h4>https://www.pluralsight.com</h4>'))
+                          .listify(educationPluralSightAssements);
  
 });

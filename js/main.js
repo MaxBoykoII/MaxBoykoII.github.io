@@ -17,5 +17,11 @@ jQuery(document).ready(function () {
     jQuery('#freecodecamp').listify(resume_1.experienceFreeCodeCamp);
     jQuery('#ubc').append(jQuery('<h4>Bsc in Mathematics, conferred 05/2015</h4>'))
         .listify(resume_1.educationUBC);
+    jQuery('#freecodecamp-edu').append(jQuery('<h4> https://www.freecodecamp.com</h4>'))
+        .listify(resume_1.educationFreeCodeCamp);
+    jQuery('#codeschool').append(jQuery('<h4>https://www.codeschool.com/</h4>'))
+        .listify(resume_1.educationCodeSchool);
+    jQuery('#pluralsight').append(jQuery('<h4>https://www.pluralsight.com</h4>'))
+        .listify(resume_1.educationPluralSightAssements);
 });
 //# sourceMappingURL=main.js.map

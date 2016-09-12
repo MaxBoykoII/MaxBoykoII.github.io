@@ -120,7 +120,19 @@ h4 {
     display: inline-block;
     font-size: 0.8000em;
     line-height: 1.9444em;
-    margin-top: 1.9444em; }
+    margin-top: 1.9444em;
+    list-style-type: none; }
+  #resume #front-end .img-responsive,
+  #resume #back-end .img-responsive,
+  #resume #miscellaneous .img-responsive,
+  #resume #currently-learning .img-responsive,
+  #resume #goldminerpulse .img-responsive,
+  #resume #freecodecamp .img-responsive,
+  #resume #ubc .img-responsive,
+  #resume #freecodecamp-edu .img-responsive,
+  #resume #codeschool .img-responsive,
+  #resume #pluralsight .img-responsive {
+    display: inline; }
 
 footer {
   margin-top: 1.9444em;
