@@ -33,6 +33,11 @@ h3 {
   line-height: 1.2444em;
   margin-top: 1.2444em; }
 
+h4 {
+  font-size: 0.8000em;
+  line-height: 1.9444em;
+  margin-top: 1.9444em; }
+
 .navbar {
   padding: 15px 30px;
   background-color: #2C3E50;
@@ -81,9 +86,9 @@ h3 {
   font-size: 1.0000em;
   line-height: 1.5556em;
   margin-top: 1.5556em; }
-  #resume h2 {
-    text-align: center; }
-  #resume h3 {
+  #resume h2,
+  #resume h3,
+  #resume h4 {
     text-align: center; }
   #resume .nav-tabs > li {
     float: none;
@@ -94,7 +99,9 @@ h3 {
     /* hasLayout ie7 trigger */ }
     @media (max-width: 767px) {
       #resume .nav-tabs > li {
-        display: block; } }
+        display: block; }
+        #resume .nav-tabs > li.active {
+          background-color: #CEC4BB; } }
   #resume .nav-tabs {
     text-align: center;
     margin-top: 1.5556em; }
@@ -103,9 +110,17 @@ h3 {
   #resume #front-end ul,
   #resume #back-end ul,
   #resume #miscellaneous ul,
-  #resume #currently-learning ul {
+  #resume #currently-learning ul,
+  #resume #goldminerpulse ul,
+  #resume #freecodecamp ul,
+  #resume #ubc ul,
+  #resume #freecodecamp-edu ul,
+  #resume #codeschool ul,
+  #resume #pluralsight ul {
     display: inline-block;
-    margin-top: 1.5556em; }
+    font-size: 0.8000em;
+    line-height: 1.9444em;
+    margin-top: 1.9444em; }
 
 footer {
   margin-top: 1.9444em;

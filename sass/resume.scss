@@ -2,23 +2,24 @@
     font-size: 1.0000em;
     line-height: 1.5556em;
     margin-top: 1.5556em;
-    h2 {
+    h2,
+    h3,
+    h4 {
         text-align: center;
     }
-    h3 {
-        text-align: center;
-    }
-    .nav-tabs> li {
+    .nav-tabs>li {
         float: none;
         display: inline-block;
         *display: inline;
         /* ie7 fix */
         zoom: 1;
         /* hasLayout ie7 trigger */
-    
-    @media (max-width: 767px){
-        display: block;
-    }    
+        @media (max-width: 767px) {
+            display: block;
+            &.active {
+                background-color: $light-complement;
+            }
+        }
     }
     .nav-tabs {
         text-align: center;
@@ -30,10 +31,18 @@
     #front-end,
     #back-end,
     #miscellaneous,
-    #currently-learning {
+    #currently-learning,
+    #goldminerpulse,
+    #freecodecamp,
+    #ubc,
+    #freecodecamp-edu,
+    #codeschool,
+    #pluralsight {
         ul {
             display: inline-block;
-            margin-top: 1.5556em;
+            font-size: 0.8000em;
+            line-height: 1.9444em;
+            margin-top: 1.9444em;
         }
     }
 }

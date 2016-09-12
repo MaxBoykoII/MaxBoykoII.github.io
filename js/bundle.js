@@ -11,10 +11,6 @@ var resume_1 = require('./resume');
 var list_plugin_1 = require('./plugins/list.plugin');
 list_plugin_1.listify(jQuery);
 jQuery(document).ready(function () {
-    $('body').scrollspy({
-        target: '.navbar',
-        offset: 160
-    });
     for (var _i = 0, paragraphs_1 = about_1.paragraphs; _i < paragraphs_1.length; _i++) {
         var paragraph = paragraphs_1[_i];
         jQuery('#about-text').append(jQuery("<p>" + paragraph + "</p>"));
@@ -23,6 +19,10 @@ jQuery(document).ready(function () {
     jQuery('#back-end').listify(resume_1.backEndSkills);
     jQuery('#miscellaneous').listify(resume_1.miscellaneousSkills);
     jQuery('#currently-learning').listify(resume_1.currentlyLearning);
+    jQuery('#goldminerpulse').listify(resume_1.experienceGoldMinerPulse);
+    jQuery('#freecodecamp').listify(resume_1.experienceFreeCodeCamp);
+    jQuery('#ubc').append(jQuery('<h4>Bsc in Mathematics, conferred 05/2015</h4>'))
+        .listify(resume_1.educationUBC);
 });
 
 },{"./about":1,"./plugins/list.plugin":3,"./resume":4,"jquery":5}],3:[function(require,module,exports){
@@ -84,11 +84,39 @@ exports.currentlyLearning = [
     'Unit Testing with Mocha and Sinon',
     'Integration Testing',
     'D3',
+    'HTML5 Emails',
     'Web Components',
     'CSS Shapes',
     'Flex Box',
     'C#',
     '.NET MVC'
+];
+exports.experienceGoldMinerPulse = [
+    'Building data exploration tools for GoldMinerPulse customers.',
+    'Turned design mockups and proposed user stories into an Angular SPA.',
+    'Helped develop the forthcoming GoldMinerPulse API.',
+    'Currently developing an Angular2 application.',
+    'Check out a live demo at <a href="https://goldminerpulse.com/_demo789/public/" target="_blank">https://goldminerpulse.com/_demo789/public/</a>.'
+];
+exports.experienceFreeCodeCamp = [
+    'Studying MEAN stack web development and preparing to volunteer on several non-profit projects.',
+    'Developed multiple front-end applications from scratch using jQuery, Bootstrap, React and AngularJS.',
+    'Developed several APIs from scratch with Node and Express.',
+    'Currently developing full-stack applications.'
+];
+exports.educationUBC = [
+    'Complex Analysis',
+    'Introduction to Modern Differential Geometry',
+    'Symmetries and Differential Equations',
+    'Real Analysis I',
+    'Real Analysis II',
+    'Probability',
+    'Stabilization and Optimal Control of Dynamical Systems',
+    'Mathematical Classical Mechanics',
+    'Partial Differential Equations',
+    'Differential Equations',
+    'Honours Advanced Calculus II',
+    'Honours Advanced Calculus I'
 ];
 
 },{}],5:[function(require,module,exports){
