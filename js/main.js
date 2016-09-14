@@ -22,6 +22,6 @@ jQuery(document).ready(function () {
     jQuery('#codeschool').append(jQuery('<h4>https://www.codeschool.com/</h4>'))
         .listify(resume_1.educationCodeSchool);
     jQuery('#pluralsight').append(jQuery('<h4>https://www.pluralsight.com</h4>'))
-        .listify(resume_1.educationPluralSightAssements);
+        .listify(resume_1.educationPluralSightAssements, 'list-inline');
 });
 //# sourceMappingURL=main.js.map

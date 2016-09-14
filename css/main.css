@@ -16,7 +16,9 @@ h3,
 a {
   font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   color: #2C3E50; }
 
 h1 {
@@ -31,12 +33,18 @@ h2 {
 h3 {
   font-size: 1.25em;
   line-height: 1.2444em;
-  margin-top: 1.2444em; }
+  margin-top: 2.4888em; }
 
 h4 {
   font-size: 0.8000em;
   line-height: 1.9444em;
   margin-top: 1.9444em; }
+
+img.img-svg {
+  height: 250px;
+  width: auto;
+  display: block;
+  margin: 0 auto; }
 
 .navbar {
   padding: 15px 30px;
@@ -72,8 +80,10 @@ h4 {
   text-align: center; }
 
 #about .circle {
-  shape-outside: ellipse() content-box;
-  shape-margin: 2%;
+  -webkit-shape-outside: ellipse() content-box;
+          shape-outside: ellipse() content-box;
+  -webkit-shape-margin: 2%;
+          shape-margin: 2%;
   margin: 2%;
   width: 10em;
   height: 20em;
@@ -134,6 +144,9 @@ h4 {
   #resume #pluralsight .img-responsive {
     display: inline; }
 
+#portfolio h2 {
+  text-align: center; }
+
 footer {
   margin-top: 1.9444em;
   padding-top: 1.9444em;
@@ -152,3 +165,35 @@ footer {
     text-align: center; }
   footer .fa {
     color: #2C3E50; }
+
+.portfolio-modal {
+  padding-right: 0 !important; }
+  .portfolio-modal .modal-content {
+    min-height: 100%;
+    text-align: center;
+    background-clip: border-box;
+    padding: 100px 0;
+    border: none;
+    border-radius: 0;
+    box-shadow: none; }
+  .portfolio-modal .modal-close {
+    position: absolute;
+    height: 75px;
+    width: 75px;
+    cursor: pointer;
+    top: 25px;
+    right: 25px;
+    background-color: transparent; }
+    .portfolio-modal .modal-close .lr {
+      height: 75px;
+      width: 1px;
+      margin-left: 35px;
+      background-color: black;
+      -webkit-transform: rotate(45deg);
+              transform: rotate(45deg); }
+    .portfolio-modal .modal-close .rl {
+      height: 75px;
+      width: 1px;
+      background-color: black;
+      -webkit-transform: rotate(90deg);
+              transform: rotate(90deg); }

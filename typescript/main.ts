@@ -44,6 +44,6 @@ jQuery(document).ready(() => {
     jQuery('#codeschool').append(jQuery('<h4>https://www.codeschool.com/</h4>'))
                         .listify(educationCodeSchool);
     jQuery('#pluralsight').append(jQuery('<h4>https://www.pluralsight.com</h4>'))
-                          .listify(educationPluralSightAssements);
+                          .listify(educationPluralSightAssements, 'list-inline');
  
 });

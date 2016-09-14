@@ -1,11 +1,18 @@
-$font-stack: Lato,'Helvetica Neue',Helvetica,Arial,sans-serif;
-$header-font-stack: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+$font-stack: Lato,
+'Helvetica Neue',
+Helvetica,
+Arial,
+sans-serif;
+$header-font-stack: Montserrat,
+"Helvetica Neue",
+Helvetica,
+Arial,
+sans-serif;
 $dark: #2C3E50;
 $midtone: #7896b5;
 $light: #d0dbe5;
 $dark-complement: #836548;
 $light-complement: #CEC4BB;
-
 body {
     font-family: $font-stack;
     padding: 4*1.5556em 1em 2em 2em;
@@ -27,32 +34,48 @@ a {
     font-family: $header-font-stack;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     color: $dark;
 }
+
 h1 {
-     font-size: 1.953em;
-     font-weight: 500;
+    font-size: 1.953em;
+    font-weight: 500;
 }
+
 h2 {
     font-size: 1.563em;
     line-height: 1.9905em;
     margin-top: 0.9952em;
 }
+
 h3 {
     font-size: 1.25em;
     line-height: 1.2444em;
-    margin-top: 1.2444em;
+    margin-top: 2*1.2444em;
 }
 
 h4 {
     font-size: 0.8000em;
     line-height: 1.9444em;
-    margin-top: 1.9444em; 
+    margin-top: 1.9444em;
 }
 
-@import "nav";
-@import "header";
-@import "about";
-@import "resume";
-@import "footer";
+img {
+    &.img-svg {
+        height: 250px;
+        width: auto;
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+@import "sections/nav";
+@import "sections/header";
+@import "sections/about";
+@import "sections/resume";
+@import "sections/portfolio";
+@import "sections/footer";
+@import "modal";
