@@ -42,9 +42,13 @@ h4 {
 
 img.img-svg {
   height: 250px;
-  width: auto;
+  width: 250px;
   display: block;
   margin: 0.9952em auto; }
+  @media (max-width: 768px) {
+    img.img-svg {
+      height: 150px;
+      width: 150px; } }
 
 .navbar {
   padding: 15px 30px;
