@@ -5,6 +5,9 @@ body {
     body {
       font-size: 18px; } }
 
+html, body {
+  overflow-x: hidden; }
+
 p {
   line-height: 1.5556;
   margin-top: 1.5556em;
