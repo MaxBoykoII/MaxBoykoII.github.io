@@ -6,9 +6,32 @@ exports.paragraphs = exports.aboutText.split('/n');
 },{}],2:[function(require,module,exports){
 "use strict";
 var jQuery = require('jquery');
+var _ = require('lodash');
+var PortfolioItem = (function () {
+    function PortfolioItem(title, svgURL, userStories, liveDemo, repo, caption) {
+        _.assign(this, { title: title, svgURL: svgURL, userStories: userStories, liveDemo: liveDemo, repo: repo, caption: caption });
+    }
+    PortfolioItem.prototype.createHTML = function (id) {
+        var modalId = "#portfolioModal" + id;
+        var templateString = "<div class=\"col-sm-4\"> \n                <a href=\"" + modalId + "\" data-toggle=\"modal\">\n                <img src=\"" + this.svgURL + "\" class=\"img-svg\" alt=\"" + this.title + "\"/>\n                </a>\n                </div>";
+        return jQuery(templateString);
+    };
+    PortfolioItem.prototype.createModalHTML = function (id) {
+        var modalId = "portfolioModal" + id;
+        var templateString = "\n    <div class=\"portfolio-modal modal fade\" id=\"" + modalId + "\" tabindex=\"-1\" role=\"dialog\" aria-hidden=\"true\">\n            <div class=\"modal-content\">\n                <div class=\"modal-close\" data-dismiss=\"modal\">\n                    <div class=\"lr\">\n                        <div class=\"rl\"></div>\n                    </div>\n                </div>\n                <div class=\"container\">\n                    <div class=\"row\">\n                        <div class=\"col-lg-8 col-lg-offset-2\">\n                            <div class=\"modal-body\">\n                                <h2>" + this.title + "</h2>\n                                <figure class=\"figure\">\n                                    <img src=\"" + this.svgURL + "\" class=\"img-svg\" alt=\"" + this.title + "\" />\n                                    <figcaption class=\"figure-caption\">" + this.caption + "</figcaption>\n                                </figure>\n                                <h3> User Stories</h3>\n                                <ol>\n                                   " + this.userStories.map(function (story) { return ("<li>" + story + "</li>"); }).join(' ') + "\n                                </ol>\n                                <ul class=\"list-inline\">\n                                    <li>\n                                        <strong> <a href=\"" + this.liveDemo + "\" target=\"_blank\">Live Demo</a></strong>\n                                    </li>\n                                    <li>\n                                        <strong> <a href=\"" + this.repo + "\" target=\"_blank\">Code</a></strong>\n                                    </li>\n                                </ul>\n                                <button class=\"btn btn-default\" data-dismiss=\"modal\">\n                            <i class=\"fa fa-times\"></i>\n                            Close \n                        </button>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    ";
+        return jQuery(templateString);
+    };
+    return PortfolioItem;
+}());
+exports.PortfolioItem = PortfolioItem;
+
+},{"jquery":14,"lodash":15}],3:[function(require,module,exports){
+"use strict";
+var jQuery = require('jquery');
 var about_1 = require('./about');
 var resume_1 = require('./resume');
 var list_plugin_1 = require('./plugins/list.plugin');
+var portfolio_1 = require('./portfolio');
 list_plugin_1.listify(jQuery);
 jQuery(document).ready(function () {
     for (var _i = 0, paragraphs_1 = about_1.paragraphs; _i < paragraphs_1.length; _i++) {
@@ -29,9 +52,17 @@ jQuery(document).ready(function () {
         .listify(resume_1.educationCodeSchool);
     jQuery('#pluralsight').append(jQuery('<h4>https://www.pluralsight.com</h4>'))
         .listify(resume_1.educationPluralSightAssements, 'list-inline');
+    var portfolioGallery = jQuery('#portfolio-gallery');
+    var portfolioModals = jQuery('#portfolio-modals');
+    for (var _a = 0, portfolioItems_1 = portfolio_1.portfolioItems; _a < portfolioItems_1.length; _a++) {
+        var item = portfolioItems_1[_a];
+        var id = portfolio_1.portfolioItems.indexOf(item);
+        portfolioGallery.append(item.createHTML(id));
+        portfolioModals.append(item.createModalHTML(id));
+    }
 });
 
-},{"./about":1,"./plugins/list.plugin":3,"./resume":4,"jquery":5}],3:[function(require,module,exports){
+},{"./about":1,"./plugins/list.plugin":4,"./portfolio":12,"./resume":13,"jquery":14}],4:[function(require,module,exports){
 "use strict";
 var _ = require('lodash');
 exports.listify = function ($) {
@@ -51,7 +82,133 @@ exports.listify = function ($) {
     };
 };
 
-},{"lodash":6}],4:[function(require,module,exports){
+},{"lodash":15}],5:[function(require,module,exports){
+"use strict";
+var portfolio_item_1 = require('../classes/portfolio-item');
+var title = "Zipline: Build a JavaScript calculator";
+var svgURL = "./images/svg/calculator.svg";
+var userStories = [
+    'I can add, subtract, multiply and divide two numbers.',
+    'I can clear the input field with a clear button.',
+    'I can keep chaining mathematical operations together until I hit the equal button, and the calculator will tell me the correct output'
+];
+var liveDemo = "http://codepen.io/MaxBoyko/full/WQKjJN";
+var repo = "http://codepen.io/MaxBoyko/pen/WQKjJN";
+var caption = "A javascript calculator";
+exports.calculator = new portfolio_item_1.PortfolioItem(title, svgURL, userStories, liveDemo, repo, caption);
+
+},{"../classes/portfolio-item":2}],6:[function(require,module,exports){
+"use strict";
+var portfolio_item_1 = require('../classes/portfolio-item');
+var title = "Build a Camper Leaderboard";
+var svgURL = "./images/svg/leaderboard.svg";
+var userStories = [
+    "I can see a table of the Free Code Camp campers who've earned the most brownie points in the past 30 days.",
+    "I can see how many brownie points they've earned in the past 30 days, and how many they've earned total.",
+    "I can toggle between sorting the list by how many brownie points they've earned in the past 30 days and by how many brownie points they've earned total."
+];
+var liveDemo = 'http://codepen.io/MaxBoyko/full/gMpWry/';
+var repo = 'http://codepen.io/MaxBoyko/pen/gMpWry';
+var caption = 'A React implementation of a leaderboard.';
+exports.leaderboard = new portfolio_item_1.PortfolioItem(title, svgURL, userStories, liveDemo, repo, caption);
+
+},{"../classes/portfolio-item":2}],7:[function(require,module,exports){
+"use strict";
+var portfolio_item_1 = require('../classes/portfolio-item');
+var title = "Build a Markdown Previewer";
+var svgURL = "./images/svg/markdown.svg";
+var userStories = [
+    "I can type GitHub-flavored Markdown into a text area.",
+    "I can see a preview of the output of my markdown that is updated as I type."
+];
+var liveDemo = 'http://codepen.io/MaxBoyko/full/BzBMgm/';
+var repo = 'http://codepen.io/MaxBoyko/pen/BzBMgm';
+var caption = 'A simple markdown previewer built with React';
+exports.markdown = new portfolio_item_1.PortfolioItem(title, svgURL, userStories, liveDemo, repo, caption);
+
+},{"../classes/portfolio-item":2}],8:[function(require,module,exports){
+"use strict";
+var portfolio_item_1 = require('../classes/portfolio-item');
+var title = "Zipline: Build a Pomodoro Clock";
+var svgURL = "./images/svg/pomodoro.svg";
+var userStories = [
+    "I can start a 25 minute pomodoro, and the timer will go off once 25 minutes has elapsed.",
+    "I can reset the clock for my next pomodoro.",
+    "I can customize the length of each pomodoro."
+];
+var liveDemo = 'http://codepen.io/MaxBoyko/full/PPNOYy/';
+var repo = 'http://codepen.io/MaxBoyko/pen/PPNOYy';
+var caption = 'A JavaScript pomodoro clock.';
+exports.pomodoro = new portfolio_item_1.PortfolioItem(title, svgURL, userStories, liveDemo, repo, caption);
+
+},{"../classes/portfolio-item":2}],9:[function(require,module,exports){
+"use strict";
+var portfolio_item_1 = require('../classes/portfolio-item');
+var title = "Zipline: Build a Simon Game";
+var svgURL = "./images/svg/simon.svg";
+var userStories = [
+    'I am presented with a random series of button presses.',
+    ' Each time I input a series of button presses correctly, I see the same series of button presses but with an additional step.',
+    'I hear a sound that corresponds to each button both when the series of button presses plays, and when I personally press a button.',
+    'If I press the wrong button, I am notified that I have done so, and that series of button presses starts again to remind me of the pattern so I can try again.',
+    'I can see how many steps are in the current series of button presses.',
+    'If I want to restart, I can hit a button to do so, and the game will return to a single step.',
+    'I can play in strict mode where if I get a button press wrong, it notifies me that I have done so, and the game restarts at a new random series of button presses.',
+    ' I can win the game by getting a series of 20 steps correct. I am notified of my victory, then the game starts over.'
+];
+var liveDemo = 'http://codepen.io/MaxBoyko/full/LpvYVw/';
+var repo = 'http://codepen.io/MaxBoyko/pen/LpvYVw';
+var caption = 'A JavaScript implementation of the 1980s game Simon <sup>&reg;</sup>';
+exports.simon = new portfolio_item_1.PortfolioItem(title, svgURL, userStories, liveDemo, repo, caption);
+
+},{"../classes/portfolio-item":2}],10:[function(require,module,exports){
+"use strict";
+var portfolio_item_1 = require('../classes/portfolio-item');
+var title = "Zipline: Build a Tic Tac Toe Game";
+var svgURL = "./images/svg/tic-tac-toe.svg";
+var userStories = [
+    "I can play a game of Tic Tac Toe with the computer.",
+    "My game will reset as soon as it's over so I can play again.",
+    "I can choose whether I want to play as X or O."
+];
+var liveDemo = 'http://codepen.io/MaxBoyko/full/qOPVjx/';
+var repo = 'http://codepen.io/MaxBoyko/pen/qOPVjx/';
+var caption = 'A JavaScript implementation of tic tac toe.';
+exports.tickTacToe = new portfolio_item_1.PortfolioItem(title, svgURL, userStories, liveDemo, repo, caption);
+
+},{"../classes/portfolio-item":2}],11:[function(require,module,exports){
+"use strict";
+var portfolio_item_1 = require('../classes/portfolio-item');
+var title = "Zipline: Build a Wikipedia Viewer";
+var svgURL = "./images/svg/wiki.svg";
+var userStories = [
+    'I can search Wikipedia entries in a search box and see the resulting Wikipedia entries.'
+];
+var liveDemo = 'http://codepen.io/MaxBoyko/full/yYbReN/';
+var repo = 'http://codepen.io/MaxBoyko/pen/yYbReN';
+var caption = 'A Wikipedia viewer';
+exports.wiki = new portfolio_item_1.PortfolioItem(title, svgURL, userStories, liveDemo, repo, caption);
+
+},{"../classes/portfolio-item":2}],12:[function(require,module,exports){
+"use strict";
+var calculator_1 = require('./portfolio-items/calculator');
+var simon_1 = require('./portfolio-items/simon');
+var wiki_1 = require('./portfolio-items/wiki');
+var tic_tac_toe_1 = require('./portfolio-items/tic-tac-toe');
+var pomodoro_1 = require('./portfolio-items/pomodoro');
+var leaderboard_1 = require('./portfolio-items/leaderboard');
+var markdown_1 = require('./portfolio-items/markdown');
+var portfolioItems = [];
+exports.portfolioItems = portfolioItems;
+portfolioItems.push(calculator_1.calculator);
+portfolioItems.push(simon_1.simon);
+portfolioItems.push(wiki_1.wiki);
+portfolioItems.push(tic_tac_toe_1.tickTacToe);
+portfolioItems.push(pomodoro_1.pomodoro);
+portfolioItems.push(leaderboard_1.leaderboard);
+portfolioItems.push(markdown_1.markdown);
+
+},{"./portfolio-items/calculator":5,"./portfolio-items/leaderboard":6,"./portfolio-items/markdown":7,"./portfolio-items/pomodoro":8,"./portfolio-items/simon":9,"./portfolio-items/tic-tac-toe":10,"./portfolio-items/wiki":11}],13:[function(require,module,exports){
 "use strict";
 exports.frontEndSkills = [
     'JavaScript',
@@ -163,7 +320,7 @@ exports.educationPluralSightAssements = [
     '<img class="img-responsive" src="https://pluralsight.imgix.net/paths/path-icons/css-c9b214f0d7.png?w=50" alt="CSS"/> &mdash; 156 • proficient • 56<sup>th</sup> percentile'
 ];
 
-},{}],5:[function(require,module,exports){
+},{}],14:[function(require,module,exports){
 /*eslint-disable no-unused-vars*/
 /*!
  * jQuery JavaScript Library v3.1.0
@@ -10239,7 +10396,7 @@ if ( !noGlobal ) {
 return jQuery;
 } );
 
-},{}],6:[function(require,module,exports){
+},{}],15:[function(require,module,exports){
 (function (global){
 /**
  * @license
@@ -26976,5 +27133,5 @@ return jQuery;
 }.call(this));
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}]},{},[2])(2)
+},{}]},{},[3])(3)
 });

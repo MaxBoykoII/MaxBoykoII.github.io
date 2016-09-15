@@ -1,6 +1,6 @@
 body {
   font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  padding: 6.2224em 1em 2em 2em; }
+  padding: 6.2224em 2em 2em 2em; }
   @media (min-width: 768px) {
     body {
       font-size: 18px; } }
@@ -44,7 +44,7 @@ img.img-svg {
   height: 250px;
   width: auto;
   display: block;
-  margin: 0 auto; }
+  margin: 0.9952em auto; }
 
 .navbar {
   padding: 15px 30px;
@@ -176,6 +176,14 @@ footer {
     border: none;
     border-radius: 0;
     box-shadow: none; }
+    .portfolio-modal .modal-content ol {
+      text-align: left; }
+    .portfolio-modal .modal-content ol,
+    .portfolio-modal .modal-content ul,
+    .portfolio-modal .modal-content p {
+      line-height: 1.5556;
+      margin-top: 1.5556em;
+      max-width: 886.6666px; }
   .portfolio-modal .modal-close {
     position: absolute;
     height: 75px;

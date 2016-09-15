@@ -8,6 +8,16 @@
         border: none;
         border-radius: 0;
         box-shadow: none;
+        ol {
+            text-align: left;
+        }
+        ol,
+        ul,
+        p {
+            line-height: 1.5556;
+            margin-top: 1.5556em;
+            max-width: 886.6666px;
+        }
     }
     .modal-close {
         position: absolute;
