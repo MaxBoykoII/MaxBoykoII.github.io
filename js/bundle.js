@@ -13,19 +13,19 @@ var PortfolioItem = (function () {
     }
     PortfolioItem.prototype.createHTML = function (id) {
         var modalId = "#portfolioModal" + id;
-        var templateString = "<div class=\"col-sm-4\"> \n                <a href=\"" + modalId + "\" data-toggle=\"modal\">\n                <img src=\"" + this.svgURL + "\" class=\"img-svg\" alt=\"" + this.title + "\"/>\n                </a>\n                </div>";
+        var templateString = "<div class=\"col-sm-4\"> \n                <a href=\"" + modalId + "\" data-toggle=\"modal\">\n                <img src=\"" + this.svgURL + "\" class=\"img-svg img-responsive\" alt=\"" + this.title + "\"/>\n                </a>\n                </div>";
         return jQuery(templateString);
     };
     PortfolioItem.prototype.createModalHTML = function (id) {
         var modalId = "portfolioModal" + id;
-        var templateString = "\n    <div class=\"portfolio-modal modal fade\" id=\"" + modalId + "\" tabindex=\"-1\" role=\"dialog\" aria-hidden=\"true\">\n            <div class=\"modal-content\">\n                <div class=\"modal-close\" data-dismiss=\"modal\">\n                    <div class=\"lr\">\n                        <div class=\"rl\"></div>\n                    </div>\n                </div>\n                <div class=\"container\">\n                    <div class=\"row\">\n                        <div class=\"col-lg-8 col-lg-offset-2\">\n                            <div class=\"modal-body\">\n                                <h2>" + this.title + "</h2>\n                                <figure class=\"figure\">\n                                    <img src=\"" + this.svgURL + "\" class=\"img-svg\" alt=\"" + this.title + "\" />\n                                    <figcaption class=\"figure-caption\">" + this.caption + "</figcaption>\n                                </figure>\n                                <h3> User Stories</h3>\n                                <ol>\n                                   " + this.userStories.map(function (story) { return ("<li>" + story + "</li>"); }).join(' ') + "\n                                </ol>\n                                <ul class=\"list-inline\">\n                                    <li>\n                                        <strong> <a href=\"" + this.liveDemo + "\" target=\"_blank\">Live Demo</a></strong>\n                                    </li>\n                                    <li>\n                                        <strong> <a href=\"" + this.repo + "\" target=\"_blank\">Code</a></strong>\n                                    </li>\n                                </ul>\n                                <button class=\"btn btn-default\" data-dismiss=\"modal\">\n                            <i class=\"fa fa-times\"></i>\n                            Close \n                        </button>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    ";
+        var templateString = "\n    <div class=\"portfolio-modal modal fade\" id=\"" + modalId + "\" tabindex=\"-1\" role=\"dialog\" aria-hidden=\"true\">\n            <div class=\"modal-content\">\n                <div class=\"modal-close\" data-dismiss=\"modal\">\n                    <div class=\"lr\">\n                        <div class=\"rl\"></div>\n                    </div>\n                </div>\n                <div class=\"container\">\n                    <div class=\"row\">\n                        <div class=\"col-lg-8 col-lg-offset-2\">\n                            <div class=\"modal-body\">\n                                <h2>" + this.title + "</h2>\n                                <figure class=\"figure\">\n                                    <img src=\"" + this.svgURL + "\" class=\"img-svg img-responsive\" alt=\"" + this.title + "\" />\n                                    <figcaption class=\"figure-caption\">" + this.caption + "</figcaption>\n                                </figure>\n                                <h3> User Stories</h3>\n                                <ol>\n                                   " + this.userStories.map(function (story) { return ("<li>" + story + "</li>"); }).join(' ') + "\n                                </ol>\n                                <ul class=\"list-inline\">\n                                    <li>\n                                        <strong> <a href=\"" + this.liveDemo + "\" target=\"_blank\">Live Demo</a></strong>\n                                    </li>\n                                    <li>\n                                        <strong> <a href=\"" + this.repo + "\" target=\"_blank\">Code</a></strong>\n                                    </li>\n                                </ul>\n                                <button class=\"btn btn-default\" data-dismiss=\"modal\">\n                            <i class=\"fa fa-times\"></i>\n                            Close \n                        </button>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    ";
         return jQuery(templateString);
     };
     return PortfolioItem;
 }());
 exports.PortfolioItem = PortfolioItem;
 
-},{"jquery":14,"lodash":15}],3:[function(require,module,exports){
+},{"jquery":19,"lodash":20}],3:[function(require,module,exports){
 "use strict";
 var jQuery = require('jquery');
 var about_1 = require('./about');
@@ -62,7 +62,7 @@ jQuery(document).ready(function () {
     }
 });
 
-},{"./about":1,"./plugins/list.plugin":4,"./portfolio":12,"./resume":13,"jquery":14}],4:[function(require,module,exports){
+},{"./about":1,"./plugins/list.plugin":4,"./portfolio":17,"./resume":18,"jquery":19}],4:[function(require,module,exports){
 "use strict";
 var _ = require('lodash');
 exports.listify = function ($) {
@@ -82,7 +82,7 @@ exports.listify = function ($) {
     };
 };
 
-},{"lodash":15}],5:[function(require,module,exports){
+},{"lodash":20}],5:[function(require,module,exports){
 "use strict";
 var portfolio_item_1 = require('../classes/portfolio-item');
 var title = "Zipline: Build a JavaScript calculator";
@@ -100,6 +100,35 @@ exports.calculator = new portfolio_item_1.PortfolioItem(title, svgURL, userStori
 },{"../classes/portfolio-item":2}],6:[function(require,module,exports){
 "use strict";
 var portfolio_item_1 = require('../classes/portfolio-item');
+var title = "File Metadata Microservice";
+var svgURL = "./images/svg/file-meta.svg";
+var userStories = [
+    'I can submit a FormData object that includes a file upload.',
+    'When I submit something, I will receive the file size in bytes within the response.'
+];
+var liveDemo = "https://file-size.herokuapp.com/";
+var repo = "https://github.com/MaxBoykoII/file-metadata-microservice";
+var caption = "A node app that displays the size of an uploaded file.";
+exports.fileMeta = new portfolio_item_1.PortfolioItem(title, svgURL, userStories, liveDemo, repo, caption);
+
+},{"../classes/portfolio-item":2}],7:[function(require,module,exports){
+"use strict";
+var portfolio_item_1 = require('../classes/portfolio-item');
+var title = "Image Search Abstraction Layer";
+var svgURL = "./images/svg/img-search.svg";
+var userStories = [
+    'I can get the image URLs, alt text and page urls for a set of images relating to a given search string.',
+    'I can paginate through the responses by adding a ?offset=2 parameter to the URL.',
+    'I can get a list of the most recently submitted search strings.'
+];
+var liveDemo = "https://img-search-abstraction-layer.herokuapp.com/";
+var repo = "https://github.com/MaxBoykoII/image-search-abstraction-layer";
+var caption = "A node app for searching images.";
+exports.imgSearch = new portfolio_item_1.PortfolioItem(title, svgURL, userStories, liveDemo, repo, caption);
+
+},{"../classes/portfolio-item":2}],8:[function(require,module,exports){
+"use strict";
+var portfolio_item_1 = require('../classes/portfolio-item');
 var title = "Build a Camper Leaderboard";
 var svgURL = "./images/svg/leaderboard.svg";
 var userStories = [
@@ -112,7 +141,7 @@ var repo = 'http://codepen.io/MaxBoyko/pen/gMpWry';
 var caption = 'A React implementation of a leaderboard.';
 exports.leaderboard = new portfolio_item_1.PortfolioItem(title, svgURL, userStories, liveDemo, repo, caption);
 
-},{"../classes/portfolio-item":2}],7:[function(require,module,exports){
+},{"../classes/portfolio-item":2}],9:[function(require,module,exports){
 "use strict";
 var portfolio_item_1 = require('../classes/portfolio-item');
 var title = "Build a Markdown Previewer";
@@ -126,7 +155,27 @@ var repo = 'http://codepen.io/MaxBoyko/pen/BzBMgm';
 var caption = 'A simple markdown previewer built with React';
 exports.markdown = new portfolio_item_1.PortfolioItem(title, svgURL, userStories, liveDemo, repo, caption);
 
-},{"../classes/portfolio-item":2}],8:[function(require,module,exports){
+},{"../classes/portfolio-item":2}],10:[function(require,module,exports){
+"use strict";
+var portfolio_item_1 = require('../classes/portfolio-item');
+var title = "Build a Voting App ";
+var svgURL = "./images/svg/max-polls.svg";
+var userStories = [
+    'As an authenticated user, I can keep my polls and come back later to access them.',
+    'As an authenticated user, I can share my polls with my friends.',
+    'As an authenticated user, I can see the aggregate results of my polls.',
+    "As an authenticated user, I can delete polls that I decide I don't want anymore.",
+    "As an authenticated user, I can create a poll with any number of possible items.",
+    "As an unauthenticated or authenticated user, I can see and vote on everyone's polls.",
+    "As an unauthenticated or authenticated user, I can see the results of polls in chart form.",
+    "As an authenticated user, if I don't like the options on a poll, I can create a new option."
+];
+var liveDemo = "https://max-polls.herokuapp.com/";
+var repo = "https://github.com/MaxBoykoII/max-polls";
+var caption = "A polling app with a node backend and angular frontend.";
+exports.maxPolls = new portfolio_item_1.PortfolioItem(title, svgURL, userStories, liveDemo, repo, caption);
+
+},{"../classes/portfolio-item":2}],11:[function(require,module,exports){
 "use strict";
 var portfolio_item_1 = require('../classes/portfolio-item');
 var title = "Zipline: Build a Pomodoro Clock";
@@ -141,7 +190,7 @@ var repo = 'http://codepen.io/MaxBoyko/pen/PPNOYy';
 var caption = 'A JavaScript pomodoro clock.';
 exports.pomodoro = new portfolio_item_1.PortfolioItem(title, svgURL, userStories, liveDemo, repo, caption);
 
-},{"../classes/portfolio-item":2}],9:[function(require,module,exports){
+},{"../classes/portfolio-item":2}],12:[function(require,module,exports){
 "use strict";
 var portfolio_item_1 = require('../classes/portfolio-item');
 var title = "Zipline: Build a Simon Game";
@@ -161,7 +210,23 @@ var repo = 'http://codepen.io/MaxBoyko/pen/LpvYVw';
 var caption = 'A JavaScript implementation of the 1980s game Simon <sup>&reg;</sup>';
 exports.simon = new portfolio_item_1.PortfolioItem(title, svgURL, userStories, liveDemo, repo, caption);
 
-},{"../classes/portfolio-item":2}],10:[function(require,module,exports){
+},{"../classes/portfolio-item":2}],13:[function(require,module,exports){
+"use strict";
+var portfolio_item_1 = require('../classes/portfolio-item');
+var title = "Chart the Stock Market ";
+var svgURL = "./images/svg/stock-sync.svg";
+var userStories = [
+    'I can view a graph displaying the recent trend lines for each added stock.',
+    'I can add new stocks by their symbol name.',
+    'I can remove stocks.',
+    'I can see changes in real-time when any other user adds or removes a stock.'
+];
+var liveDemo = "https://stock-sync.herokuapp.com/";
+var repo = "https://github.com/MaxBoykoII/stock-sync";
+var caption = "An app to chart the stock market and sync across multiple clients";
+exports.stockSync = new portfolio_item_1.PortfolioItem(title, svgURL, userStories, liveDemo, repo, caption);
+
+},{"../classes/portfolio-item":2}],14:[function(require,module,exports){
 "use strict";
 var portfolio_item_1 = require('../classes/portfolio-item');
 var title = "Zipline: Build a Tic Tac Toe Game";
@@ -176,7 +241,22 @@ var repo = 'http://codepen.io/MaxBoyko/pen/qOPVjx/';
 var caption = 'A JavaScript implementation of tic tac toe.';
 exports.tickTacToe = new portfolio_item_1.PortfolioItem(title, svgURL, userStories, liveDemo, repo, caption);
 
-},{"../classes/portfolio-item":2}],11:[function(require,module,exports){
+},{"../classes/portfolio-item":2}],15:[function(require,module,exports){
+"use strict";
+var portfolio_item_1 = require('../classes/portfolio-item');
+var title = "URL Shortener Microservice";
+var svgURL = "./images/svg/url-shortener.svg";
+var userStories = [
+    'I can pass a URL as a parameter and I will receive a shortened URL in the JSON response.',
+    "If I pass an invalid URL that doesn't follow the valid http://www.example.com format, the JSON response will contain an error instead.",
+    'I can get a list of the most recently submitted search strings.'
+];
+var liveDemo = "https://url-shortener-2.herokuapp.com/";
+var repo = "https://github.com/MaxBoykoII/url-shortener";
+var caption = "A node app for shortening urls.";
+exports.urlShortener = new portfolio_item_1.PortfolioItem(title, svgURL, userStories, liveDemo, repo, caption);
+
+},{"../classes/portfolio-item":2}],16:[function(require,module,exports){
 "use strict";
 var portfolio_item_1 = require('../classes/portfolio-item');
 var title = "Zipline: Build a Wikipedia Viewer";
@@ -189,7 +269,7 @@ var repo = 'http://codepen.io/MaxBoyko/pen/yYbReN';
 var caption = 'A Wikipedia viewer';
 exports.wiki = new portfolio_item_1.PortfolioItem(title, svgURL, userStories, liveDemo, repo, caption);
 
-},{"../classes/portfolio-item":2}],12:[function(require,module,exports){
+},{"../classes/portfolio-item":2}],17:[function(require,module,exports){
 "use strict";
 var calculator_1 = require('./portfolio-items/calculator');
 var simon_1 = require('./portfolio-items/simon');
@@ -198,6 +278,11 @@ var tic_tac_toe_1 = require('./portfolio-items/tic-tac-toe');
 var pomodoro_1 = require('./portfolio-items/pomodoro');
 var leaderboard_1 = require('./portfolio-items/leaderboard');
 var markdown_1 = require('./portfolio-items/markdown');
+var max_polls_1 = require('./portfolio-items/max-polls');
+var stock_sync_1 = require('./portfolio-items/stock-sync');
+var img_search_1 = require('./portfolio-items/img-search');
+var url_shortener_1 = require('./portfolio-items/url-shortener');
+var file_meta_1 = require('./portfolio-items/file-meta');
 var portfolioItems = [];
 exports.portfolioItems = portfolioItems;
 portfolioItems.push(calculator_1.calculator);
@@ -207,8 +292,13 @@ portfolioItems.push(tic_tac_toe_1.tickTacToe);
 portfolioItems.push(pomodoro_1.pomodoro);
 portfolioItems.push(leaderboard_1.leaderboard);
 portfolioItems.push(markdown_1.markdown);
+portfolioItems.push(max_polls_1.maxPolls);
+portfolioItems.push(stock_sync_1.stockSync);
+portfolioItems.push(img_search_1.imgSearch);
+portfolioItems.push(url_shortener_1.urlShortener);
+portfolioItems.push(file_meta_1.fileMeta);
 
-},{"./portfolio-items/calculator":5,"./portfolio-items/leaderboard":6,"./portfolio-items/markdown":7,"./portfolio-items/pomodoro":8,"./portfolio-items/simon":9,"./portfolio-items/tic-tac-toe":10,"./portfolio-items/wiki":11}],13:[function(require,module,exports){
+},{"./portfolio-items/calculator":5,"./portfolio-items/file-meta":6,"./portfolio-items/img-search":7,"./portfolio-items/leaderboard":8,"./portfolio-items/markdown":9,"./portfolio-items/max-polls":10,"./portfolio-items/pomodoro":11,"./portfolio-items/simon":12,"./portfolio-items/stock-sync":13,"./portfolio-items/tic-tac-toe":14,"./portfolio-items/url-shortener":15,"./portfolio-items/wiki":16}],18:[function(require,module,exports){
 "use strict";
 exports.frontEndSkills = [
     'JavaScript',
@@ -320,7 +410,7 @@ exports.educationPluralSightAssements = [
     '<img class="img-responsive" src="https://pluralsight.imgix.net/paths/path-icons/css-c9b214f0d7.png?w=50" alt="CSS"/> &mdash; 156 • proficient • 56<sup>th</sup> percentile'
 ];
 
-},{}],14:[function(require,module,exports){
+},{}],19:[function(require,module,exports){
 /*eslint-disable no-unused-vars*/
 /*!
  * jQuery JavaScript Library v3.1.0
@@ -10396,7 +10486,7 @@ if ( !noGlobal ) {
 return jQuery;
 } );
 
-},{}],15:[function(require,module,exports){
+},{}],20:[function(require,module,exports){
 (function (global){
 /**
  * @license
