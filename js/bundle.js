@@ -25,7 +25,11 @@ var PortfolioItem = (function () {
 }());
 exports.PortfolioItem = PortfolioItem;
 
+<<<<<<< HEAD
 },{"jquery":19,"lodash":20}],3:[function(require,module,exports){
+=======
+},{"jquery":21,"lodash":22}],3:[function(require,module,exports){
+>>>>>>> refine-portfolio
 "use strict";
 var jQuery = require('jquery');
 var about_1 = require('./about');
@@ -62,7 +66,11 @@ jQuery(document).ready(function () {
     }
 });
 
+<<<<<<< HEAD
 },{"./about":1,"./plugins/list.plugin":4,"./portfolio":17,"./resume":18,"jquery":19}],4:[function(require,module,exports){
+=======
+},{"./about":1,"./plugins/list.plugin":4,"./portfolio":19,"./resume":20,"jquery":21}],4:[function(require,module,exports){
+>>>>>>> refine-portfolio
 "use strict";
 var _ = require('lodash');
 exports.listify = function ($) {
@@ -114,6 +122,7 @@ exports.fileMeta = new portfolio_item_1.PortfolioItem(title, svgURL, userStories
 },{"../classes/portfolio-item":2}],7:[function(require,module,exports){
 "use strict";
 var portfolio_item_1 = require('../classes/portfolio-item');
+
 var title = "Image Search Abstraction Layer";
 var svgURL = "./images/svg/img-search.svg";
 var userStories = [
@@ -155,7 +164,7 @@ var repo = 'http://codepen.io/MaxBoyko/pen/BzBMgm';
 var caption = 'A simple markdown previewer built with React';
 exports.markdown = new portfolio_item_1.PortfolioItem(title, svgURL, userStories, liveDemo, repo, caption);
 
-},{"../classes/portfolio-item":2}],10:[function(require,module,exports){
+},{"../classes/portfolio-item":2}],11:[function(require,module,exports){
 "use strict";
 var portfolio_item_1 = require('../classes/portfolio-item');
 var title = "Build a Voting App ";
@@ -190,7 +199,11 @@ var repo = 'http://codepen.io/MaxBoyko/pen/PPNOYy';
 var caption = 'A JavaScript pomodoro clock.';
 exports.pomodoro = new portfolio_item_1.PortfolioItem(title, svgURL, userStories, liveDemo, repo, caption);
 
+<<<<<<< HEAD
 },{"../classes/portfolio-item":2}],12:[function(require,module,exports){
+=======
+},{"../classes/portfolio-item":2}],13:[function(require,module,exports){
+>>>>>>> refine-portfolio
 "use strict";
 var portfolio_item_1 = require('../classes/portfolio-item');
 var title = "Zipline: Build a Simon Game";
@@ -283,6 +296,7 @@ var stock_sync_1 = require('./portfolio-items/stock-sync');
 var img_search_1 = require('./portfolio-items/img-search');
 var url_shortener_1 = require('./portfolio-items/url-shortener');
 var file_meta_1 = require('./portfolio-items/file-meta');
+
 var portfolioItems = [];
 exports.portfolioItems = portfolioItems;
 portfolioItems.push(calculator_1.calculator);
@@ -10486,7 +10500,11 @@ if ( !noGlobal ) {
 return jQuery;
 } );
 
+<<<<<<< HEAD
 },{}],20:[function(require,module,exports){
+=======
+},{}],22:[function(require,module,exports){
+>>>>>>> refine-portfolio
 (function (global){
 /**
  * @license
