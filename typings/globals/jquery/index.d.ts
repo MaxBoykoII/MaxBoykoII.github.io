@@ -2978,7 +2978,8 @@ interface JQuery {
      Make lists out of an array of strings
      */
     
-    listify(arr: string[], className?: string): JQuery;    
+    listify(arr: string[], className?: string): JQuery;
+    tooltip(): JQuery;
     /**
      * 
      * Reduce the set of matched elements to the first in the set.

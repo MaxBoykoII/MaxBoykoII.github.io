@@ -95,7 +95,7 @@
         </div>
         <div class="row">
             <div class="col-xs-12">
-                <h3> Technical Skills</h3>
+                <h3> <i class="fa fa-gears"></i> Technical Skills</h3>
             </div>
         </div>
         <div class="row">
@@ -127,7 +127,7 @@
         </div>
         <div class="row" id="experience">
             <div class="col-xs-12">
-                <h3>Web Development Experience</h3>
+                <h3><i class="fa fa-suitcase"></i> Web Development Experience</h3>
             </div>
         </div>
         <div class="row">
@@ -154,7 +154,7 @@
         </div>
         <div class="row" id="education">
             <div class="col-xs-12">
-                <h3>Education</h3>
+                <h3><i class="fa fa-graduation-cap"></i> Education</h3>
             </div>
         </div>
         <div class="row">
@@ -197,18 +197,23 @@
     <section class="container" id="portfolio">
         <div class="row">
             <div class="col-xs-12">
-                <h2>Portfolio</h2>
+                <h2>
+                    <a href="https://github.com/MaxBoykoII/" class="no-underline" target="_blank">
+                        <i class="fa fa-github" data-toggle="tooltip" data-position="top" data-delay="50" title="Github"></i>
+                    </a>
+                    <span>Portfolio</span>
+                </h2>
             </div>
         </div>
         <div class="row" id="portfolio-gallery">
-           <!-- Add portfolio items dynamically -->
+            <!-- Add portfolio items dynamically -->
         </div>
     </section>
     <!--/Portfolio -->
 
     <!-- Portfolio Modals -->
     <section id="portfolio-modals" class="container">
-       <!-- Add portfolio modals dynamically -->
+        <!-- Add portfolio modals dynamically -->
     </section>
 
     <footer>
@@ -250,6 +255,11 @@
     <!--endbower-->
     <script>
         new WOW().init();
+    </script>
+    <script>
+        $(document).ready(function() {
+            $('[data-toggle="tooltip"]').tooltip({template: '<div class="tooltip" role="tooltip"><div class="tooltip-inner"></div></div>'});
+        });
     </script>
     <script src="js/bundle.min.js"></script>
 </body>

@@ -80,6 +80,11 @@ img {
     }
 }
 
+.no-underline {
+    &:hover, &:focus {
+        text-decoration: none !important;
+    }
+}
 @import "sections/nav";
 @import "sections/header";
 @import "sections/about";

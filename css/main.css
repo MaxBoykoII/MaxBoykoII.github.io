@@ -53,6 +53,9 @@ img.img-svg {
       height: 150px;
       width: 150px; } }
 
+.no-underline:hover, .no-underline:focus {
+  text-decoration: none !important; }
+
 .navbar {
   padding: 15px 30px;
   background-color: #2C3E50;

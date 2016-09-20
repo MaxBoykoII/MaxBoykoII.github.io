@@ -11,8 +11,24 @@ import { pomodoro } from './portfolio-items/pomodoro';
 import { leaderboard } from './portfolio-items/leaderboard';
 import { markdown } from './portfolio-items/markdown';
 
+/*
+ * Import each full-stack item
+ */
+ import { maxPolls } from './portfolio-items/max-polls';
+ import { stockSync } from './portfolio-items/stock-sync';
+ 
+ /*
+  * Import each microservice
+  */
+ import { imgSearch } from './portfolio-items/img-search';
+ import { urlShortener } from './portfolio-items/url-shortener';
+ import { fileMeta } from './portfolio-items/file-meta';
+ 
 let portfolioItems: PortfolioItem[] = [];
 
+/*
+ * Front-end projects
+ */
 portfolioItems.push(calculator);
 portfolioItems.push(simon);
 portfolioItems.push(wiki);
@@ -21,4 +37,17 @@ portfolioItems.push(pomodoro);
 portfolioItems.push(leaderboard);
 portfolioItems.push(markdown);
 
+/*
+ * Full-stack projects
+ */
+portfolioItems.push(maxPolls);
+portfolioItems.push(stockSync);
+
+/*
+ * Import each microservice
+ */
+portfolioItems.push(imgSearch);
+portfolioItems.push(urlShortener);
+portfolioItems.push(fileMeta);
+ 
 export { portfolioItems };
