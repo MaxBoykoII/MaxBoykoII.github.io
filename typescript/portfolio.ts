@@ -23,6 +23,8 @@ import { markdown } from './portfolio-items/markdown';
  import { imgSearch } from './portfolio-items/img-search';
  import { urlShortener } from './portfolio-items/url-shortener';
  import { fileMeta } from './portfolio-items/file-meta';
+ import { headParser } from './portfolio-items/head-parser';
+ import { timestamp } from './portfolio-items/timestamp';
  
 let portfolioItems: PortfolioItem[] = [];
 
@@ -49,5 +51,7 @@ portfolioItems.push(stockSync);
 portfolioItems.push(imgSearch);
 portfolioItems.push(urlShortener);
 portfolioItems.push(fileMeta);
+portfolioItems.push(headParser);
+portfolioItems.push(timestamp);
  
 export { portfolioItems };
