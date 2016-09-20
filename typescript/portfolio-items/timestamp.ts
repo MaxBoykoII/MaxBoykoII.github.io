@@ -7,8 +7,8 @@ const userStories = [
     'If it does, it returns both the Unix timestamp and the natural language form of that date.',
     'If it does not contain a date or Unix timestamp, it returns null for those properties.'
 ];
-const liveDemo = "https://headparser-microservice.herokuapp.com/";
+const liveDemo = "https://timestamp-microservice-2.herokuapp.com/";
 const repo = "https://github.com/MaxBoykoII/timestampMicroservice";
-const caption = "A node app that parses data from request headers.";
+const caption = "A node app that generates timestamps.";
 
 export const timestamp = new PortfolioItem(title, svgURL, userStories, liveDemo, repo, caption);

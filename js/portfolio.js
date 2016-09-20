@@ -11,11 +11,8 @@ var stock_sync_1 = require('./portfolio-items/stock-sync');
 var img_search_1 = require('./portfolio-items/img-search');
 var url_shortener_1 = require('./portfolio-items/url-shortener');
 var file_meta_1 = require('./portfolio-items/file-meta');
-<<<<<<< HEAD
-=======
 var head_parser_1 = require('./portfolio-items/head-parser');
 var timestamp_1 = require('./portfolio-items/timestamp');
->>>>>>> refine-portfolio
 var portfolioItems = [];
 exports.portfolioItems = portfolioItems;
 portfolioItems.push(calculator_1.calculator);
@@ -30,9 +27,6 @@ portfolioItems.push(stock_sync_1.stockSync);
 portfolioItems.push(img_search_1.imgSearch);
 portfolioItems.push(url_shortener_1.urlShortener);
 portfolioItems.push(file_meta_1.fileMeta);
-<<<<<<< HEAD
-=======
 portfolioItems.push(head_parser_1.headParser);
 portfolioItems.push(timestamp_1.timestamp);
->>>>>>> refine-portfolio
 //# sourceMappingURL=portfolio.js.map

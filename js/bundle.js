@@ -25,11 +25,7 @@ var PortfolioItem = (function () {
 }());
 exports.PortfolioItem = PortfolioItem;
 
-<<<<<<< HEAD
-},{"jquery":19,"lodash":20}],3:[function(require,module,exports){
-=======
 },{"jquery":21,"lodash":22}],3:[function(require,module,exports){
->>>>>>> refine-portfolio
 "use strict";
 var jQuery = require('jquery');
 var about_1 = require('./about');
@@ -66,11 +62,7 @@ jQuery(document).ready(function () {
     }
 });
 
-<<<<<<< HEAD
-},{"./about":1,"./plugins/list.plugin":4,"./portfolio":17,"./resume":18,"jquery":19}],4:[function(require,module,exports){
-=======
 },{"./about":1,"./plugins/list.plugin":4,"./portfolio":19,"./resume":20,"jquery":21}],4:[function(require,module,exports){
->>>>>>> refine-portfolio
 "use strict";
 var _ = require('lodash');
 exports.listify = function ($) {
@@ -90,7 +82,7 @@ exports.listify = function ($) {
     };
 };
 
-},{"lodash":20}],5:[function(require,module,exports){
+},{"lodash":22}],5:[function(require,module,exports){
 "use strict";
 var portfolio_item_1 = require('../classes/portfolio-item');
 var title = "Zipline: Build a JavaScript calculator";
@@ -122,7 +114,19 @@ exports.fileMeta = new portfolio_item_1.PortfolioItem(title, svgURL, userStories
 },{"../classes/portfolio-item":2}],7:[function(require,module,exports){
 "use strict";
 var portfolio_item_1 = require('../classes/portfolio-item');
+var title = "Request Header Parser Microservice";
+var svgURL = "./images/svg/head-parser.svg";
+var userStories = [
+    'I can get the IP address, language and operating system for my browser.'
+];
+var liveDemo = "https://headparser-microservice.herokuapp.com/";
+var repo = "https://github.com/MaxBoykoII/headparser-microservice";
+var caption = "A node app that parses request headers.";
+exports.headParser = new portfolio_item_1.PortfolioItem(title, svgURL, userStories, liveDemo, repo, caption);
 
+},{"../classes/portfolio-item":2}],8:[function(require,module,exports){
+"use strict";
+var portfolio_item_1 = require('../classes/portfolio-item');
 var title = "Image Search Abstraction Layer";
 var svgURL = "./images/svg/img-search.svg";
 var userStories = [
@@ -135,7 +139,7 @@ var repo = "https://github.com/MaxBoykoII/image-search-abstraction-layer";
 var caption = "A node app for searching images.";
 exports.imgSearch = new portfolio_item_1.PortfolioItem(title, svgURL, userStories, liveDemo, repo, caption);
 
-},{"../classes/portfolio-item":2}],8:[function(require,module,exports){
+},{"../classes/portfolio-item":2}],9:[function(require,module,exports){
 "use strict";
 var portfolio_item_1 = require('../classes/portfolio-item');
 var title = "Build a Camper Leaderboard";
@@ -150,7 +154,7 @@ var repo = 'http://codepen.io/MaxBoyko/pen/gMpWry';
 var caption = 'A React implementation of a leaderboard.';
 exports.leaderboard = new portfolio_item_1.PortfolioItem(title, svgURL, userStories, liveDemo, repo, caption);
 
-},{"../classes/portfolio-item":2}],9:[function(require,module,exports){
+},{"../classes/portfolio-item":2}],10:[function(require,module,exports){
 "use strict";
 var portfolio_item_1 = require('../classes/portfolio-item');
 var title = "Build a Markdown Previewer";
@@ -184,7 +188,7 @@ var repo = "https://github.com/MaxBoykoII/max-polls";
 var caption = "A polling app with a node backend and angular frontend.";
 exports.maxPolls = new portfolio_item_1.PortfolioItem(title, svgURL, userStories, liveDemo, repo, caption);
 
-},{"../classes/portfolio-item":2}],11:[function(require,module,exports){
+},{"../classes/portfolio-item":2}],12:[function(require,module,exports){
 "use strict";
 var portfolio_item_1 = require('../classes/portfolio-item');
 var title = "Zipline: Build a Pomodoro Clock";
@@ -199,11 +203,7 @@ var repo = 'http://codepen.io/MaxBoyko/pen/PPNOYy';
 var caption = 'A JavaScript pomodoro clock.';
 exports.pomodoro = new portfolio_item_1.PortfolioItem(title, svgURL, userStories, liveDemo, repo, caption);
 
-<<<<<<< HEAD
-},{"../classes/portfolio-item":2}],12:[function(require,module,exports){
-=======
 },{"../classes/portfolio-item":2}],13:[function(require,module,exports){
->>>>>>> refine-portfolio
 "use strict";
 var portfolio_item_1 = require('../classes/portfolio-item');
 var title = "Zipline: Build a Simon Game";
@@ -223,7 +223,7 @@ var repo = 'http://codepen.io/MaxBoyko/pen/LpvYVw';
 var caption = 'A JavaScript implementation of the 1980s game Simon <sup>&reg;</sup>';
 exports.simon = new portfolio_item_1.PortfolioItem(title, svgURL, userStories, liveDemo, repo, caption);
 
-},{"../classes/portfolio-item":2}],13:[function(require,module,exports){
+},{"../classes/portfolio-item":2}],14:[function(require,module,exports){
 "use strict";
 var portfolio_item_1 = require('../classes/portfolio-item');
 var title = "Chart the Stock Market ";
@@ -239,7 +239,7 @@ var repo = "https://github.com/MaxBoykoII/stock-sync";
 var caption = "An app to chart the stock market and sync across multiple clients";
 exports.stockSync = new portfolio_item_1.PortfolioItem(title, svgURL, userStories, liveDemo, repo, caption);
 
-},{"../classes/portfolio-item":2}],14:[function(require,module,exports){
+},{"../classes/portfolio-item":2}],15:[function(require,module,exports){
 "use strict";
 var portfolio_item_1 = require('../classes/portfolio-item');
 var title = "Zipline: Build a Tic Tac Toe Game";
@@ -254,7 +254,22 @@ var repo = 'http://codepen.io/MaxBoyko/pen/qOPVjx/';
 var caption = 'A JavaScript implementation of tic tac toe.';
 exports.tickTacToe = new portfolio_item_1.PortfolioItem(title, svgURL, userStories, liveDemo, repo, caption);
 
-},{"../classes/portfolio-item":2}],15:[function(require,module,exports){
+},{"../classes/portfolio-item":2}],16:[function(require,module,exports){
+"use strict";
+var portfolio_item_1 = require('../classes/portfolio-item');
+var title = "Timestamp Microservice";
+var svgURL = "./images/svg/timestamp.svg";
+var userStories = [
+    'I can pass a string as a parameter, and it will check to see whether that string contains either a unix timestamp or a natural language date (example: January 1, 2016)',
+    'If it does, it returns both the Unix timestamp and the natural language form of that date.',
+    'If it does not contain a date or Unix timestamp, it returns null for those properties.'
+];
+var liveDemo = "https://timestamp-microservice-2.herokuapp.com/";
+var repo = "https://github.com/MaxBoykoII/timestampMicroservice";
+var caption = "A node app that generates timestamps.";
+exports.timestamp = new portfolio_item_1.PortfolioItem(title, svgURL, userStories, liveDemo, repo, caption);
+
+},{"../classes/portfolio-item":2}],17:[function(require,module,exports){
 "use strict";
 var portfolio_item_1 = require('../classes/portfolio-item');
 var title = "URL Shortener Microservice";
@@ -269,7 +284,7 @@ var repo = "https://github.com/MaxBoykoII/url-shortener";
 var caption = "A node app for shortening urls.";
 exports.urlShortener = new portfolio_item_1.PortfolioItem(title, svgURL, userStories, liveDemo, repo, caption);
 
-},{"../classes/portfolio-item":2}],16:[function(require,module,exports){
+},{"../classes/portfolio-item":2}],18:[function(require,module,exports){
 "use strict";
 var portfolio_item_1 = require('../classes/portfolio-item');
 var title = "Zipline: Build a Wikipedia Viewer";
@@ -282,7 +297,7 @@ var repo = 'http://codepen.io/MaxBoyko/pen/yYbReN';
 var caption = 'A Wikipedia viewer';
 exports.wiki = new portfolio_item_1.PortfolioItem(title, svgURL, userStories, liveDemo, repo, caption);
 
-},{"../classes/portfolio-item":2}],17:[function(require,module,exports){
+},{"../classes/portfolio-item":2}],19:[function(require,module,exports){
 "use strict";
 var calculator_1 = require('./portfolio-items/calculator');
 var simon_1 = require('./portfolio-items/simon');
@@ -296,7 +311,8 @@ var stock_sync_1 = require('./portfolio-items/stock-sync');
 var img_search_1 = require('./portfolio-items/img-search');
 var url_shortener_1 = require('./portfolio-items/url-shortener');
 var file_meta_1 = require('./portfolio-items/file-meta');
-
+var head_parser_1 = require('./portfolio-items/head-parser');
+var timestamp_1 = require('./portfolio-items/timestamp');
 var portfolioItems = [];
 exports.portfolioItems = portfolioItems;
 portfolioItems.push(calculator_1.calculator);
@@ -311,8 +327,10 @@ portfolioItems.push(stock_sync_1.stockSync);
 portfolioItems.push(img_search_1.imgSearch);
 portfolioItems.push(url_shortener_1.urlShortener);
 portfolioItems.push(file_meta_1.fileMeta);
+portfolioItems.push(head_parser_1.headParser);
+portfolioItems.push(timestamp_1.timestamp);
 
-},{"./portfolio-items/calculator":5,"./portfolio-items/file-meta":6,"./portfolio-items/img-search":7,"./portfolio-items/leaderboard":8,"./portfolio-items/markdown":9,"./portfolio-items/max-polls":10,"./portfolio-items/pomodoro":11,"./portfolio-items/simon":12,"./portfolio-items/stock-sync":13,"./portfolio-items/tic-tac-toe":14,"./portfolio-items/url-shortener":15,"./portfolio-items/wiki":16}],18:[function(require,module,exports){
+},{"./portfolio-items/calculator":5,"./portfolio-items/file-meta":6,"./portfolio-items/head-parser":7,"./portfolio-items/img-search":8,"./portfolio-items/leaderboard":9,"./portfolio-items/markdown":10,"./portfolio-items/max-polls":11,"./portfolio-items/pomodoro":12,"./portfolio-items/simon":13,"./portfolio-items/stock-sync":14,"./portfolio-items/tic-tac-toe":15,"./portfolio-items/timestamp":16,"./portfolio-items/url-shortener":17,"./portfolio-items/wiki":18}],20:[function(require,module,exports){
 "use strict";
 exports.frontEndSkills = [
     'JavaScript',
@@ -424,7 +442,7 @@ exports.educationPluralSightAssements = [
     '<img class="img-responsive" src="https://pluralsight.imgix.net/paths/path-icons/css-c9b214f0d7.png?w=50" alt="CSS"/> &mdash; 156 • proficient • 56<sup>th</sup> percentile'
 ];
 
-},{}],19:[function(require,module,exports){
+},{}],21:[function(require,module,exports){
 /*eslint-disable no-unused-vars*/
 /*!
  * jQuery JavaScript Library v3.1.0
@@ -10500,11 +10518,7 @@ if ( !noGlobal ) {
 return jQuery;
 } );
 
-<<<<<<< HEAD
-},{}],20:[function(require,module,exports){
-=======
 },{}],22:[function(require,module,exports){
->>>>>>> refine-portfolio
 (function (global){
 /**
  * @license
