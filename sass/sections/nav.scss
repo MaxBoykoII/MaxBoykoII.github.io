@@ -5,16 +5,19 @@
     transition: all 0.5s;
     text-transform: uppercase;
     font-weight: 700;
-    a, button {
+    a,
+    button {
         color: white !important;
         font-size: 1em;
+        transition: all .3s ease-in-out;
     }
 }
 
 .navbar-default .navbar-nav>.active>a,
 .navbar-default .navbar-nav>.active>a:focus,
 .navbar-default .navbar-nav>.active>a:hover {
-    background-color: $dark-complement !important;
+    background-color: #fff !important;
+    color: $green !important;
 }
 
 .animated-header-scroll {

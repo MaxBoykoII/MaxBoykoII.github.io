@@ -198,7 +198,7 @@
         <div class="row">
             <div class="col-xs-12">
                 <h2>
-                    <a href="https://github.com/MaxBoykoII/" class="no-underline" target="_blank">
+                    <a href="https://github.com/MaxBoykoII/" class="portfolio-link" target="_blank">
                         <i class="fa fa-github" data-toggle="tooltip" data-position="top" data-delay="50" title="Github"></i>
                     </a>
                     <span>Portfolio</span>
@@ -219,32 +219,40 @@
     <footer>
         <div class="container">
             <div class="row">
-                <div class="col-sm-12">
-                    <strong id="contact">Contact </strong>
+                <div class="col-md-4">
+                    <h2>Location</h2>
+                    <p>1452 128 ST
+                       <br>
+                       Surrey, BC</p>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-12">
+                <div class="col-md-4">
+                    <h2>Around the Web</h2>
                     <ul class="list-inline">
-                        <li> maxboykomax@gmail.com</li>
-                        <li> • </li>
-                        <li>604-542-1014 </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-12">
-                    <ul class="list-inline">
-                        <li><a href="https://twitter.com/MBoyko92" target="_blank"><i class="fa fa-twitter icon-4x"></i></a></li>
-                        <li> • </li>
-                        <li><a href="https://github.com/MaxBoykoII/" target="_blank"><i class="fa fa-github"></i></a></li>
-                        <li> • </li>
-                        <li><a href="https://www.linkedin.com/in/maxboykomax" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                        <li>
+                            <a href="https://twitter.com/MBoyko92" class="btn-social btn-outline" target="_blank">
+                                <i class="fa fa-fw fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/MaxBoykoII" class="btn-social btn-outline" target="_blank">
+                                <i class="fa fa-fw fa-github"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/in/maxboykomax" class="btn-social btn-outline" target="_blank">
+                                <i class="fa fa-fw fa-linkedin"></i>
+                            </a>
                         </li>
                     </ul>
                 </div>
+                <div class="col-md-4">
+                    <h2 id="contact">Contact</h2>
+                    <p>maxboykomax@gmail.com
+                    <br>
+                    604-542-104
+                    </p>
+                </div>
             </div>
-        </div>
     </footer>
 
     <!--bower:js-->
@@ -258,7 +266,9 @@
     </script>
     <script>
         $(document).ready(function() {
-            $('[data-toggle="tooltip"]').tooltip({template: '<div class="tooltip" role="tooltip"><div class="tooltip-inner"></div></div>'});
+            $('[data-toggle="tooltip"]').tooltip({
+                template: '<div class="tooltip" role="tooltip"><div class="tooltip-inner"></div></div>'
+            });
         });
     </script>
     <script src="js/bundle.min.js"></script>

@@ -5,7 +5,8 @@ body {
     body {
       font-size: 18px; } }
 
-html, body {
+html,
+body {
   overflow-x: hidden; }
 
 p {
@@ -53,8 +54,45 @@ img.img-svg {
       height: 150px;
       width: 150px; } }
 
-.no-underline:hover, .no-underline:focus {
-  text-decoration: none !important; }
+.btn-social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #fff;
+  height: 50px;
+  width: 50px;
+  border: 2px solid #fff;
+  border-radius: 100%;
+  text-align: center;
+  font-size: 1.563em;
+  line-height: 50px;
+  margin-top: 0.9952em;
+  padding: 0.33173em;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out; }
+  .btn-social:active, .btn-social:focus, .btn-social:hover {
+    color: #18BC9C;
+    outline: 0;
+    background-color: #fff;
+    text-decoration: none; }
+
+.portfolio-link {
+  height: 50px;
+  width: 50px;
+  color: #2C3E50;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out; }
+  .portfolio-link:active, .portfolio-link:focus, .portfolio-link:hover {
+    color: #18BC9C;
+    outline: 0;
+    text-decoration: none; }
 
 .navbar {
   padding: 15px 30px;
@@ -63,14 +101,18 @@ img.img-svg {
   transition: all 0.5s;
   text-transform: uppercase;
   font-weight: 700; }
-  .navbar a, .navbar button {
+  .navbar a,
+  .navbar button {
     color: white !important;
-    font-size: 1em; }
+    font-size: 1em;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out; }
 
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:focus,
 .navbar-default .navbar-nav > .active > a:hover {
-  background-color: #836548 !important; }
+  background-color: #fff !important;
+  color: #18BC9C !important; }
 
 .animated-header-scroll {
   padding-top: 5px;
@@ -161,20 +203,23 @@ footer {
   margin-top: 1.9444em;
   padding-top: 1.9444em;
   padding-bottom: 1.9444em;
-  background-color: #d0dbe5;
+  background-color: #2C3E50;
   font-size: 0.8000em;
   line-height: 1.9444em;
   position: absolute;
   width: 100%;
   left: 0;
-  right: 0; }
-  footer ul {
-    text-align: center; }
-  footer strong {
-    display: block;
-    text-align: center; }
-  footer .fa {
-    color: #2C3E50; }
+  right: 0;
+  text-align: center; }
+  footer h2 {
+    text-transform: uppercase;
+    color: white;
+    font-weight: 700; }
+  footer p {
+    color: white;
+    font-size: 1.563em;
+    line-height: 1.9905em;
+    margin-top: 0.9952em; }
 
 .portfolio-modal {
   padding-right: 0 !important; }

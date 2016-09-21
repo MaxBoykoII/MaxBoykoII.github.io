@@ -13,6 +13,7 @@ $midtone: #7896b5;
 $light: #d0dbe5;
 $dark-complement: #836548;
 $light-complement: #CEC4BB;
+$green: #18BC9C;
 body {
     font-family: $font-stack;
     padding: 4*1.5556em 2em 2em 2em;
@@ -21,7 +22,8 @@ body {
     }
 }
 
-html, body {
+html,
+body {
     overflow-x: hidden;
 }
 
@@ -73,18 +75,52 @@ img {
         width: 250px;
         display: block;
         margin: 0.9952em auto;
-        @media (max-width : 768px) {
+        @media (max-width: 768px) {
             height: 150px;
             width: 150px;
         }
     }
 }
 
-.no-underline {
-    &:hover, &:focus {
-        text-decoration: none !important;
+.btn-social {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+    height: 50px;
+    width: 50px;
+    border: 2px solid #fff;
+    border-radius: 100%;
+    text-align: center;
+    font-size: 1.563em;
+    line-height: 50px;
+    margin-top: 0.9952em;
+    padding: (0.9952/3) * 1em;
+    transition: all .3s ease-in-out;
+    &:active,
+    &:focus,
+    &:hover {
+        color: $green;
+        outline: 0;
+        background-color: #fff;
+        text-decoration: none;
     }
 }
+
+.portfolio-link {
+    height: 50px;
+    width: 50px;
+    color: $dark;
+    transition: all .3s ease-in-out;
+    &:active,
+    &:focus,
+    &:hover {
+        color: $green;
+        outline: 0;
+        text-decoration: none;
+    }
+}
+
 @import "sections/nav";
 @import "sections/header";
 @import "sections/about";
