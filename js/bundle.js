@@ -60,6 +60,22 @@ jQuery(document).ready(function () {
         portfolioGallery.append(item.createHTML(id));
         portfolioModals.append(item.createModalHTML(id));
     }
+    $('body').scrollspy({
+        target: '.navbar-fixed-top',
+        offset: 51
+    });
+    $('nav a').bind('click', function (event) {
+        var $anchor = $(this);
+        $('html, body').stop().animate({
+            scrollTop: ($($anchor.attr('href')).offset().top - 50)
+        }, 1250, 'easeInOutExpo');
+        event.preventDefault();
+    });
+    $('#mainNav').affix({
+        offset: {
+            top: 100
+        }
+    });
 });
 
 },{"./about":1,"./plugins/list.plugin":4,"./portfolio":19,"./resume":20,"jquery":21}],4:[function(require,module,exports){

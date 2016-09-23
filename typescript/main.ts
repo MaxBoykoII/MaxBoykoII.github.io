@@ -60,7 +60,7 @@ jQuery(document).ready(() => {
     jQuery('#pluralsight').append(jQuery('<h4>https://www.pluralsight.com</h4>'))
         .listify(educationPluralSightAssements, 'list-inline');
    /* 
-    *Add portfolio items to portfolio section 
+    * Add portfolio items to portfolio section 
     */
     const portfolioGallery = jQuery('#portfolio-gallery');
     const portfolioModals = jQuery('#portfolio-modals');
@@ -69,5 +69,35 @@ jQuery(document).ready(() => {
         portfolioGallery.append(item.createHTML(id));
         portfolioModals.append(item.createModalHTML(id));
     }
-   
+    
+    /*
+     * Add Scrollspy
+     */
+     
+     $('body').scrollspy({
+        target: '.navbar-fixed-top',
+        offset: 51
+    });
+    
+    /*
+     * Smooth Scrolling with jQuery easing plugin-in
+     */
+    
+     $('nav a').bind('click', function(event) {
+        let $anchor = $(this);
+        $('html, body').stop().animate({
+            scrollTop: ($($anchor.attr('href')).offset().top - 50)
+        }, 1250, 'easeInOutExpo');
+        event.preventDefault();
+    });
+    
+    /*
+     * Offset for Main Navigation
+     */
+    
+    $('#mainNav').affix({
+        offset: {
+            top: 100
+        }
+    })
 });

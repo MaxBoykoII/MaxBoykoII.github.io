@@ -2980,6 +2980,8 @@ interface JQuery {
     
     listify(arr: string[], className?: string): JQuery;
     tooltip(): JQuery;
+    affix(args: any): JQuery;
+    scrollspy(args: any): JQuery;
     /**
      * 
      * Reduce the set of matched elements to the first in the set.
