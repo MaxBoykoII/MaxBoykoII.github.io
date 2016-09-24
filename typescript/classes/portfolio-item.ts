@@ -15,11 +15,16 @@ export class PortfolioItem implements PortfolioItemInterface {
     }
     createHTML(id: number) {
      const modalId =`#portfolioModal${id}`;
-     const templateString = `<div class="col-sm-4"> 
-                <a href="${modalId}" data-toggle="modal">
-                <img src="${this.svgURL}" class="img-svg img-responsive" alt="${this.title}"/>
-                </a>
-                </div>`;
+     const templateString = `<div class="col-sm-4">
+         <a href="${modalId}" data-toggle="modal">
+             <div class="caption">
+                 <div class="caption-content">
+                 <i class="fa fa-search-plus fa-3x"></i>
+                 </div>
+             </div>
+             <img src="${this.svgURL}" class="img-svg img-responsive" alt="${this.title}" />
+         </a>
+     </div>`;
                 
         return jQuery(templateString);
     }

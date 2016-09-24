@@ -7,7 +7,7 @@ var PortfolioItem = (function () {
     }
     PortfolioItem.prototype.createHTML = function (id) {
         var modalId = "#portfolioModal" + id;
-        var templateString = "<div class=\"col-sm-4\"> \n                <a href=\"" + modalId + "\" data-toggle=\"modal\">\n                <img src=\"" + this.svgURL + "\" class=\"img-svg img-responsive\" alt=\"" + this.title + "\"/>\n                </a>\n                </div>";
+        var templateString = "<div class=\"col-sm-4\">\n         <a href=\"" + modalId + "\" data-toggle=\"modal\">\n             <div class=\"caption\">\n                 <div class=\"caption-content\">\n                 <i class=\"fa fa-search-plus fa-3x\"></i>\n                 </div>\n             </div>\n             <img src=\"" + this.svgURL + "\" class=\"img-svg img-responsive\" alt=\"" + this.title + "\" />\n         </a>\n     </div>";
         return jQuery(templateString);
     };
     PortfolioItem.prototype.createModalHTML = function (id) {

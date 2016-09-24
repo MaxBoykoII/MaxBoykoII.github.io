@@ -199,6 +199,25 @@ img.img-svg {
 #portfolio h2 {
   text-align: center; }
 
+#portfolio .caption {
+  background: white;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  -webkit-transition: all ease 0.5s;
+  transition: all ease 0.5s; }
+  #portfolio .caption:hover {
+    opacity: 0.85; }
+  #portfolio .caption .caption-content {
+    width: 100%; }
+  #portfolio .caption i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%); }
+
 footer {
   margin-top: 1.9444em;
   padding-top: 1.9444em;
