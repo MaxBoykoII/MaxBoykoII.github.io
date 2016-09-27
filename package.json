@@ -4,7 +4,6 @@
   "description": "My GitHub page",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "lite-server -c config.json",
     "clean": "rm -rf ./js",
     "build": "npm run clean && tsc",

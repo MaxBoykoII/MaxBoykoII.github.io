@@ -1,6 +1,10 @@
 import { PortfolioItem } from './classes/portfolio-item';
 
 /*
+ * Import each data visualization project
+ */
+import { barChart } from './portfolio-items/bar-chart';
+/*
  * Import each front-end portfolio item
  */
 import { calculator } from './portfolio-items/calculator';
@@ -14,6 +18,7 @@ import { markdown } from './portfolio-items/markdown';
 /*
  * Import each full-stack item
  */
+ import { nightlife } from './portfolio-items/nightlife';
  import { maxPolls } from './portfolio-items/max-polls';
  import { stockSync } from './portfolio-items/stock-sync';
  
@@ -30,6 +35,12 @@ import { markdown } from './portfolio-items/markdown';
 let portfolioItems: PortfolioItem[] = [];
 
 /*
+ * Data visualization projects
+ */
+ 
+ portfolioItems.push(barChart);
+
+/*
  * Front-end projects
  */
 portfolioItems.push(calculator);
@@ -43,6 +54,7 @@ portfolioItems.push(markdown);
 /*
  * Full-stack projects
  */
+portfolioItems.push(nightlife);
 portfolioItems.push(maxPolls);
 portfolioItems.push(stockSync);
 

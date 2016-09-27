@@ -103,9 +103,9 @@ exports.educationCodeSchool = [
     'Git Real'
 ];
 exports.educationPluralSightAssements = [
-    '<img class="img-responsive" src="https://pluralsight.imgix.net/paths/path-icons/javascript-36f5949a45.png?w=50" alt="JavaScript"/> &mdash; 199 • proficient • 80<sup>th</sup> percentile',
-    '<img class="img-responsive" src="https://pluralsight.imgix.net/paths/path-icons/html5-7ac65c8ec0.png?w=50" alt="HTML5"/> &mdash; 197 • proficient • 79<sup>th</sup> percentile',
-    '<img class="img-responsive" src="https://pluralsight.imgix.net/paths/path-icons/angular-14a0f6532f.png?w=50" alt="AngularJS"/> &mdash; 197 • proficient • 79<sup>th</sup> percentile',
-    '<img class="img-responsive" src="https://pluralsight.imgix.net/paths/path-icons/css-c9b214f0d7.png?w=50" alt="CSS"/> &mdash; 156 • proficient • 56<sup>th</sup> percentile'
+    '<img class="img-responsive" src="./images/icons/javascript.png" alt="JavaScript"/> &mdash; 199 • proficient • 80<sup>th</sup> percentile',
+    '<img class="img-responsive" src="./images/icons/html5.png" alt="HTML5"/> &mdash; 197 • proficient • 79<sup>th</sup> percentile',
+    '<img class="img-responsive" src="./images/icons/angular.png" alt="AngularJS"/> &mdash; 197 • proficient • 79<sup>th</sup> percentile',
+    '<img class="img-responsive" src="./images/icons/css.png" alt="CSS"/> &mdash; 156 • proficient • 56<sup>th</sup> percentile'
 ];
 //# sourceMappingURL=resume.js.map
