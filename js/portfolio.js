@@ -1,5 +1,6 @@
 "use strict";
 var bar_chart_1 = require('./portfolio-items/bar-chart');
+var scatterplot_1 = require('./portfolio-items/scatterplot');
 var calculator_1 = require('./portfolio-items/calculator');
 var simon_1 = require('./portfolio-items/simon');
 var wiki_1 = require('./portfolio-items/wiki');
@@ -18,6 +19,7 @@ var timestamp_1 = require('./portfolio-items/timestamp');
 var portfolioItems = [];
 exports.portfolioItems = portfolioItems;
 portfolioItems.push(bar_chart_1.barChart);
+portfolioItems.push(scatterplot_1.scatterplot);
 portfolioItems.push(calculator_1.calculator);
 portfolioItems.push(simon_1.simon);
 portfolioItems.push(wiki_1.wiki);

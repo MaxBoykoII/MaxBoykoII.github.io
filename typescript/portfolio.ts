@@ -4,6 +4,7 @@ import { PortfolioItem } from './classes/portfolio-item';
  * Import each data visualization project
  */
 import { barChart } from './portfolio-items/bar-chart';
+import { scatterplot } from './portfolio-items/scatterplot';
 /*
  * Import each front-end portfolio item
  */
@@ -39,6 +40,7 @@ let portfolioItems: PortfolioItem[] = [];
  */
  
  portfolioItems.push(barChart);
+ portfolioItems.push(scatterplot);
 
 /*
  * Front-end projects

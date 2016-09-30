@@ -25,7 +25,7 @@ var PortfolioItem = (function () {
 }());
 exports.PortfolioItem = PortfolioItem;
 
-},{"jquery":23,"lodash":24}],3:[function(require,module,exports){
+},{"jquery":24,"lodash":25}],3:[function(require,module,exports){
 "use strict";
 var jQuery = require('jquery');
 var about_1 = require('./about');
@@ -78,7 +78,7 @@ jQuery(document).ready(function () {
     });
 });
 
-},{"./about":1,"./plugins/list.plugin":4,"./portfolio":21,"./resume":22,"jquery":23}],4:[function(require,module,exports){
+},{"./about":1,"./plugins/list.plugin":4,"./portfolio":22,"./resume":23,"jquery":24}],4:[function(require,module,exports){
 "use strict";
 var _ = require('lodash');
 exports.listify = function ($) {
@@ -98,7 +98,7 @@ exports.listify = function ($) {
     };
 };
 
-},{"lodash":24}],5:[function(require,module,exports){
+},{"lodash":25}],5:[function(require,module,exports){
 "use strict";
 var portfolio_item_1 = require('../classes/portfolio-item');
 var title = "Visualize Data with a Bar Chart ";
@@ -253,6 +253,21 @@ exports.pomodoro = new portfolio_item_1.PortfolioItem(title, svgURL, userStories
 },{"../classes/portfolio-item":2}],15:[function(require,module,exports){
 "use strict";
 var portfolio_item_1 = require('../classes/portfolio-item');
+var title = "Visualize Data with a Scatterplot Graph";
+var svgURL = "./images/svg/scatterplot.svg";
+var userStories = [
+    "I can see performance time visualized in a scatterplot graph.",
+    "I can mouse over a plot to see a tooltip with additional details.",
+    "The chart is responsive."
+];
+var liveDemo = 'http://codepen.io/MaxBoyko/full/yaoPdm/';
+var repo = 'http://codepen.io/MaxBoyko/pen/yaoPdm';
+var caption = 'A responsive scatterplot built with d3';
+exports.scatterplot = new portfolio_item_1.PortfolioItem(title, svgURL, userStories, liveDemo, repo, caption);
+
+},{"../classes/portfolio-item":2}],16:[function(require,module,exports){
+"use strict";
+var portfolio_item_1 = require('../classes/portfolio-item');
 var title = "Zipline: Build a Simon Game";
 var svgURL = "./images/svg/simon.svg";
 var userStories = [
@@ -270,7 +285,7 @@ var repo = 'http://codepen.io/MaxBoyko/pen/LpvYVw';
 var caption = 'A JavaScript implementation of the 1980s game Simon <sup>&reg;</sup>';
 exports.simon = new portfolio_item_1.PortfolioItem(title, svgURL, userStories, liveDemo, repo, caption);
 
-},{"../classes/portfolio-item":2}],16:[function(require,module,exports){
+},{"../classes/portfolio-item":2}],17:[function(require,module,exports){
 "use strict";
 var portfolio_item_1 = require('../classes/portfolio-item');
 var title = "Chart the Stock Market ";
@@ -286,7 +301,7 @@ var repo = "https://github.com/MaxBoykoII/stock-sync";
 var caption = "An app to chart the stock market and sync across multiple clients";
 exports.stockSync = new portfolio_item_1.PortfolioItem(title, svgURL, userStories, liveDemo, repo, caption);
 
-},{"../classes/portfolio-item":2}],17:[function(require,module,exports){
+},{"../classes/portfolio-item":2}],18:[function(require,module,exports){
 "use strict";
 var portfolio_item_1 = require('../classes/portfolio-item');
 var title = "Zipline: Build a Tic Tac Toe Game";
@@ -301,7 +316,7 @@ var repo = 'http://codepen.io/MaxBoyko/pen/qOPVjx/';
 var caption = 'A JavaScript implementation of tic tac toe.';
 exports.tickTacToe = new portfolio_item_1.PortfolioItem(title, svgURL, userStories, liveDemo, repo, caption);
 
-},{"../classes/portfolio-item":2}],18:[function(require,module,exports){
+},{"../classes/portfolio-item":2}],19:[function(require,module,exports){
 "use strict";
 var portfolio_item_1 = require('../classes/portfolio-item');
 var title = "Timestamp Microservice";
@@ -316,7 +331,7 @@ var repo = "https://github.com/MaxBoykoII/timestampMicroservice";
 var caption = "A node app that generates timestamps.";
 exports.timestamp = new portfolio_item_1.PortfolioItem(title, svgURL, userStories, liveDemo, repo, caption);
 
-},{"../classes/portfolio-item":2}],19:[function(require,module,exports){
+},{"../classes/portfolio-item":2}],20:[function(require,module,exports){
 "use strict";
 var portfolio_item_1 = require('../classes/portfolio-item');
 var title = "URL Shortener Microservice";
@@ -331,7 +346,7 @@ var repo = "https://github.com/MaxBoykoII/url-shortener";
 var caption = "A node app for shortening urls.";
 exports.urlShortener = new portfolio_item_1.PortfolioItem(title, svgURL, userStories, liveDemo, repo, caption);
 
-},{"../classes/portfolio-item":2}],20:[function(require,module,exports){
+},{"../classes/portfolio-item":2}],21:[function(require,module,exports){
 "use strict";
 var portfolio_item_1 = require('../classes/portfolio-item');
 var title = "Zipline: Build a Wikipedia Viewer";
@@ -344,9 +359,10 @@ var repo = 'http://codepen.io/MaxBoyko/pen/yYbReN';
 var caption = 'A Wikipedia viewer';
 exports.wiki = new portfolio_item_1.PortfolioItem(title, svgURL, userStories, liveDemo, repo, caption);
 
-},{"../classes/portfolio-item":2}],21:[function(require,module,exports){
+},{"../classes/portfolio-item":2}],22:[function(require,module,exports){
 "use strict";
 var bar_chart_1 = require('./portfolio-items/bar-chart');
+var scatterplot_1 = require('./portfolio-items/scatterplot');
 var calculator_1 = require('./portfolio-items/calculator');
 var simon_1 = require('./portfolio-items/simon');
 var wiki_1 = require('./portfolio-items/wiki');
@@ -365,6 +381,7 @@ var timestamp_1 = require('./portfolio-items/timestamp');
 var portfolioItems = [];
 exports.portfolioItems = portfolioItems;
 portfolioItems.push(bar_chart_1.barChart);
+portfolioItems.push(scatterplot_1.scatterplot);
 portfolioItems.push(calculator_1.calculator);
 portfolioItems.push(simon_1.simon);
 portfolioItems.push(wiki_1.wiki);
@@ -381,7 +398,7 @@ portfolioItems.push(file_meta_1.fileMeta);
 portfolioItems.push(head_parser_1.headParser);
 portfolioItems.push(timestamp_1.timestamp);
 
-},{"./portfolio-items/bar-chart":5,"./portfolio-items/calculator":6,"./portfolio-items/file-meta":7,"./portfolio-items/head-parser":8,"./portfolio-items/img-search":9,"./portfolio-items/leaderboard":10,"./portfolio-items/markdown":11,"./portfolio-items/max-polls":12,"./portfolio-items/nightlife":13,"./portfolio-items/pomodoro":14,"./portfolio-items/simon":15,"./portfolio-items/stock-sync":16,"./portfolio-items/tic-tac-toe":17,"./portfolio-items/timestamp":18,"./portfolio-items/url-shortener":19,"./portfolio-items/wiki":20}],22:[function(require,module,exports){
+},{"./portfolio-items/bar-chart":5,"./portfolio-items/calculator":6,"./portfolio-items/file-meta":7,"./portfolio-items/head-parser":8,"./portfolio-items/img-search":9,"./portfolio-items/leaderboard":10,"./portfolio-items/markdown":11,"./portfolio-items/max-polls":12,"./portfolio-items/nightlife":13,"./portfolio-items/pomodoro":14,"./portfolio-items/scatterplot":15,"./portfolio-items/simon":16,"./portfolio-items/stock-sync":17,"./portfolio-items/tic-tac-toe":18,"./portfolio-items/timestamp":19,"./portfolio-items/url-shortener":20,"./portfolio-items/wiki":21}],23:[function(require,module,exports){
 "use strict";
 exports.frontEndSkills = [
     'JavaScript',
@@ -493,7 +510,7 @@ exports.educationPluralSightAssements = [
     '<img class="img-responsive" src="./images/icons/css.png" alt="CSS"/> &mdash; 156 • proficient • 56<sup>th</sup> percentile'
 ];
 
-},{}],23:[function(require,module,exports){
+},{}],24:[function(require,module,exports){
 /*eslint-disable no-unused-vars*/
 /*!
  * jQuery JavaScript Library v3.1.0
@@ -10569,7 +10586,7 @@ if ( !noGlobal ) {
 return jQuery;
 } );
 
-},{}],24:[function(require,module,exports){
+},{}],25:[function(require,module,exports){
 (function (global){
 /**
  * @license
