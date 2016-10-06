@@ -45,8 +45,8 @@ jQuery(document).ready(() => {
     /* 
      * Add experience at goldminerpulse and freeCodeCamp 
      */
-    jQuery('#goldminerpulse').listify(experienceGoldMinerPulse);
-    jQuery('#freecodecamp').listify(experienceFreeCodeCamp);
+   // jQuery('#goldminerpulse').listify(experienceGoldMinerPulse);
+    //jQuery('#freecodecamp').listify(experienceFreeCodeCamp);
 
     /* 
      * Add eduction at UBC, freeCodeCamp, Codeschool, and pluralsight 

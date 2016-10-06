@@ -109,7 +109,7 @@ export const educationCodeSchool = [
     'Git Real'
     ];
 
-//TODO: Add image icons for assements 
+ 
 export const educationPluralSightAssements= [
     '<img class="img-responsive" src="./images/icons/javascript.png" alt="JavaScript"/> &mdash; 199 • proficient • 80<sup>th</sup> percentile',
     '<img class="img-responsive" src="./images/icons/html5.png" alt="HTML5"/> &mdash; 197 • proficient • 79<sup>th</sup> percentile',

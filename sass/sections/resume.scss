@@ -7,6 +7,9 @@
     h4 {
         text-align: center;
     }
+    #experience h3 {
+        margin-bottom: 2.4888em;
+    }
     .nav-tabs>li {
         float: none;
         display: inline-block;
@@ -50,3 +53,5 @@
         }
     }
 }
+
+@import "timeline";

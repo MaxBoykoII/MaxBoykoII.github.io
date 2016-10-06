@@ -10,8 +10,12 @@
     .icon-list {
         line-height: 1.5556;
         margin-top: 1.5556em;
-        max-width: 886.6666px;
-        margin-left: auto;
-        margin-right: auto;
+        display: inline-flex;
+        padding: 0;
+        justify-content: center;
+        
+        li {
+            list-style-type: none;
+        }
     }
 }
