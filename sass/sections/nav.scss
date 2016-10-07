@@ -1,5 +1,5 @@
 .navbar {
-    padding: 15px 30px;
+    padding: 20px 30px;
     background-color: $dark;
     -webkit-transition: all 0.5s;
     transition: all 0.5s;
@@ -10,6 +10,11 @@
         color: white !important;
         font-size: 1em;
         transition: all .3s ease-in-out;
+    }
+    @media(max-width: 768px){
+        .page-scroll:last-of-type {
+            margin-right: 1em;
+        }
     }
 }
 

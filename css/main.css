@@ -97,7 +97,7 @@ img.img-svg {
     text-decoration: none; }
 
 .navbar {
-  padding: 15px 30px;
+  padding: 20px 30px;
   background-color: #2C3E50;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
@@ -109,6 +109,9 @@ img.img-svg {
     font-size: 1em;
     -webkit-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out; }
+  @media (max-width: 768px) {
+    .navbar .page-scroll:last-of-type {
+      margin-right: 1em; } }
 
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:focus,
@@ -230,7 +233,7 @@ img.img-svg {
   max-width: 886.6666px;
   font-weight: 700; }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 769px) {
   .timeline ul li {
     list-style-type: none;
     position: relative;
@@ -285,19 +288,46 @@ img.img-svg {
     left: -289px;
     /*250+45-6*/ } }
 
-@media screen and (max-width: 600px) {
-  .timeline ul li {
-    list-style-type: none; }
+@media screen and (max-width: 775px) {
+  .timeline ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch; }
+    .timeline ul li {
+      list-style-type: none;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
   .timeline ul li div {
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+                -ms-grid-row-align: stretch;
+            align-items: stretch;
     bottom: 0;
-    width: 100%;
     margin-top: 1em;
     padding: 15px;
     background: #f4f4f4;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12); }
     .timeline ul li div span {
       display: block;
-      text-align: center; } }
+      text-align: center;
+      margin-top: 1em; } }
+
+@media screen and (max-width: 500px) {
+  .timeline ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+                -ms-grid-row-align: center;
+            align-items: center; } }
 
 #portfolio h2 {
   text-align: center; }
