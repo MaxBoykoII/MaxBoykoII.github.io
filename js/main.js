@@ -14,8 +14,6 @@ jQuery(document).ready(function () {
     jQuery('#back-end').listify(resume_1.backEndSkills);
     jQuery('#miscellaneous').listify(resume_1.miscellaneousSkills);
     jQuery('#currently-learning').listify(resume_1.currentlyLearning);
-    jQuery('#goldminerpulse').listify(resume_1.experienceGoldMinerPulse);
-    jQuery('#freecodecamp').listify(resume_1.experienceFreeCodeCamp);
     jQuery('#ubc').append(jQuery('<h4>Bsc in Mathematics, conferred 05/2015</h4>'))
         .listify(resume_1.educationUBC);
     jQuery('#freecodecamp-edu').append(jQuery('<h4> https://www.freecodecamp.com</h4>'))

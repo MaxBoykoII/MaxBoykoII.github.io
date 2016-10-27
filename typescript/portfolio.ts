@@ -5,6 +5,8 @@ import { PortfolioItem } from './classes/portfolio-item';
  */
 import { barChart } from './portfolio-items/bar-chart';
 import { scatterplot } from './portfolio-items/scatterplot';
+import { heatMap } from './portfolio-items/heat-map';
+
 /*
  * Import each front-end portfolio item
  */
@@ -38,9 +40,9 @@ let portfolioItems: PortfolioItem[] = [];
 /*
  * Data visualization projects
  */
- 
- portfolioItems.push(barChart);
- portfolioItems.push(scatterplot);
+portfolioItems.push(barChart);
+portfolioItems.push(scatterplot);
+portfolioItems.push(heatMap);
 
 /*
  * Front-end projects
@@ -69,5 +71,7 @@ portfolioItems.push(fileMeta);
 portfolioItems.push(headParser);
 portfolioItems.push(timestamp);
 
- 
-export { portfolioItems };
+
+export {
+ portfolioItems
+};

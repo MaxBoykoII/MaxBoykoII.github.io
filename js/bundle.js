@@ -25,7 +25,7 @@ var PortfolioItem = (function () {
 }());
 exports.PortfolioItem = PortfolioItem;
 
-},{"jquery":24,"lodash":25}],3:[function(require,module,exports){
+},{"jquery":25,"lodash":26}],3:[function(require,module,exports){
 "use strict";
 var jQuery = require('jquery');
 var about_1 = require('./about');
@@ -42,8 +42,6 @@ jQuery(document).ready(function () {
     jQuery('#back-end').listify(resume_1.backEndSkills);
     jQuery('#miscellaneous').listify(resume_1.miscellaneousSkills);
     jQuery('#currently-learning').listify(resume_1.currentlyLearning);
-    jQuery('#goldminerpulse').listify(resume_1.experienceGoldMinerPulse);
-    jQuery('#freecodecamp').listify(resume_1.experienceFreeCodeCamp);
     jQuery('#ubc').append(jQuery('<h4>Bsc in Mathematics, conferred 05/2015</h4>'))
         .listify(resume_1.educationUBC);
     jQuery('#freecodecamp-edu').append(jQuery('<h4> https://www.freecodecamp.com</h4>'))
@@ -78,7 +76,7 @@ jQuery(document).ready(function () {
     });
 });
 
-},{"./about":1,"./plugins/list.plugin":4,"./portfolio":22,"./resume":23,"jquery":24}],4:[function(require,module,exports){
+},{"./about":1,"./plugins/list.plugin":4,"./portfolio":23,"./resume":24,"jquery":25}],4:[function(require,module,exports){
 "use strict";
 var _ = require('lodash');
 exports.listify = function ($) {
@@ -98,7 +96,7 @@ exports.listify = function ($) {
     };
 };
 
-},{"lodash":25}],5:[function(require,module,exports){
+},{"lodash":26}],5:[function(require,module,exports){
 "use strict";
 var portfolio_item_1 = require('../classes/portfolio-item');
 var title = "Visualize Data with a Bar Chart ";
@@ -158,6 +156,22 @@ exports.headParser = new portfolio_item_1.PortfolioItem(title, svgURL, userStori
 },{"../classes/portfolio-item":2}],9:[function(require,module,exports){
 "use strict";
 var portfolio_item_1 = require('../classes/portfolio-item');
+var title = "Visualize Data with a Responsive Heat Map";
+var svgURL = "./images/svg/heat-map.svg";
+var userStories = [
+    'I can view a heat map with data represented both on the Y and X axis.',
+    'Each cell is colored based its relationship to other data.',
+    'I can mouse over a cell in the heat map to get more exact information.',
+    'The chart is responsive.'
+];
+var liveDemo = "http://codepen.io/MaxBoyko/full/zKyjPO/";
+var repo = "http://codepen.io/MaxBoyko/pen/zKyjPO";
+var caption = "A responsive heat map built with d3";
+exports.heatMap = new portfolio_item_1.PortfolioItem(title, svgURL, userStories, liveDemo, repo, caption);
+
+},{"../classes/portfolio-item":2}],10:[function(require,module,exports){
+"use strict";
+var portfolio_item_1 = require('../classes/portfolio-item');
 var title = "Image Search Abstraction Layer";
 var svgURL = "./images/svg/img-search.svg";
 var userStories = [
@@ -170,7 +184,7 @@ var repo = "https://github.com/MaxBoykoII/image-search-abstraction-layer";
 var caption = "A node app for searching images.";
 exports.imgSearch = new portfolio_item_1.PortfolioItem(title, svgURL, userStories, liveDemo, repo, caption);
 
-},{"../classes/portfolio-item":2}],10:[function(require,module,exports){
+},{"../classes/portfolio-item":2}],11:[function(require,module,exports){
 "use strict";
 var portfolio_item_1 = require('../classes/portfolio-item');
 var title = "Build a Camper Leaderboard";
@@ -185,7 +199,7 @@ var repo = 'http://codepen.io/MaxBoyko/pen/gMpWry';
 var caption = 'A React implementation of a leaderboard.';
 exports.leaderboard = new portfolio_item_1.PortfolioItem(title, svgURL, userStories, liveDemo, repo, caption);
 
-},{"../classes/portfolio-item":2}],11:[function(require,module,exports){
+},{"../classes/portfolio-item":2}],12:[function(require,module,exports){
 "use strict";
 var portfolio_item_1 = require('../classes/portfolio-item');
 var title = "Build a Markdown Previewer";
@@ -199,7 +213,7 @@ var repo = 'http://codepen.io/MaxBoyko/pen/BzBMgm';
 var caption = 'A simple markdown previewer built with React';
 exports.markdown = new portfolio_item_1.PortfolioItem(title, svgURL, userStories, liveDemo, repo, caption);
 
-},{"../classes/portfolio-item":2}],12:[function(require,module,exports){
+},{"../classes/portfolio-item":2}],13:[function(require,module,exports){
 "use strict";
 var portfolio_item_1 = require('../classes/portfolio-item');
 var title = "Build a Voting App ";
@@ -219,7 +233,7 @@ var repo = "https://github.com/MaxBoykoII/max-polls";
 var caption = "A polling app with a node backend and angular frontend.";
 exports.maxPolls = new portfolio_item_1.PortfolioItem(title, svgURL, userStories, liveDemo, repo, caption);
 
-},{"../classes/portfolio-item":2}],13:[function(require,module,exports){
+},{"../classes/portfolio-item":2}],14:[function(require,module,exports){
 "use strict";
 var portfolio_item_1 = require('../classes/portfolio-item');
 var title = "Build a Nightlife Coordination App";
@@ -235,7 +249,7 @@ var repo = "https://github.com/MaxBoykoII/nightlife";
 var caption = "A nightlife coordination app built with angular 2 and node";
 exports.nightlife = new portfolio_item_1.PortfolioItem(title, svgURL, userStories, liveDemo, repo, caption);
 
-},{"../classes/portfolio-item":2}],14:[function(require,module,exports){
+},{"../classes/portfolio-item":2}],15:[function(require,module,exports){
 "use strict";
 var portfolio_item_1 = require('../classes/portfolio-item');
 var title = "Zipline: Build a Pomodoro Clock";
@@ -250,7 +264,7 @@ var repo = 'http://codepen.io/MaxBoyko/pen/PPNOYy';
 var caption = 'A JavaScript pomodoro clock.';
 exports.pomodoro = new portfolio_item_1.PortfolioItem(title, svgURL, userStories, liveDemo, repo, caption);
 
-},{"../classes/portfolio-item":2}],15:[function(require,module,exports){
+},{"../classes/portfolio-item":2}],16:[function(require,module,exports){
 "use strict";
 var portfolio_item_1 = require('../classes/portfolio-item');
 var title = "Visualize Data with a Scatterplot Graph";
@@ -265,7 +279,7 @@ var repo = 'http://codepen.io/MaxBoyko/pen/yaoPdm';
 var caption = 'A responsive scatterplot built with d3';
 exports.scatterplot = new portfolio_item_1.PortfolioItem(title, svgURL, userStories, liveDemo, repo, caption);
 
-},{"../classes/portfolio-item":2}],16:[function(require,module,exports){
+},{"../classes/portfolio-item":2}],17:[function(require,module,exports){
 "use strict";
 var portfolio_item_1 = require('../classes/portfolio-item');
 var title = "Zipline: Build a Simon Game";
@@ -285,7 +299,7 @@ var repo = 'http://codepen.io/MaxBoyko/pen/LpvYVw';
 var caption = 'A JavaScript implementation of the 1980s game Simon <sup>&reg;</sup>';
 exports.simon = new portfolio_item_1.PortfolioItem(title, svgURL, userStories, liveDemo, repo, caption);
 
-},{"../classes/portfolio-item":2}],17:[function(require,module,exports){
+},{"../classes/portfolio-item":2}],18:[function(require,module,exports){
 "use strict";
 var portfolio_item_1 = require('../classes/portfolio-item');
 var title = "Chart the Stock Market ";
@@ -301,7 +315,7 @@ var repo = "https://github.com/MaxBoykoII/stock-sync";
 var caption = "An app to chart the stock market and sync across multiple clients";
 exports.stockSync = new portfolio_item_1.PortfolioItem(title, svgURL, userStories, liveDemo, repo, caption);
 
-},{"../classes/portfolio-item":2}],18:[function(require,module,exports){
+},{"../classes/portfolio-item":2}],19:[function(require,module,exports){
 "use strict";
 var portfolio_item_1 = require('../classes/portfolio-item');
 var title = "Zipline: Build a Tic Tac Toe Game";
@@ -316,7 +330,7 @@ var repo = 'http://codepen.io/MaxBoyko/pen/qOPVjx/';
 var caption = 'A JavaScript implementation of tic tac toe.';
 exports.tickTacToe = new portfolio_item_1.PortfolioItem(title, svgURL, userStories, liveDemo, repo, caption);
 
-},{"../classes/portfolio-item":2}],19:[function(require,module,exports){
+},{"../classes/portfolio-item":2}],20:[function(require,module,exports){
 "use strict";
 var portfolio_item_1 = require('../classes/portfolio-item');
 var title = "Timestamp Microservice";
@@ -331,7 +345,7 @@ var repo = "https://github.com/MaxBoykoII/timestampMicroservice";
 var caption = "A node app that generates timestamps.";
 exports.timestamp = new portfolio_item_1.PortfolioItem(title, svgURL, userStories, liveDemo, repo, caption);
 
-},{"../classes/portfolio-item":2}],20:[function(require,module,exports){
+},{"../classes/portfolio-item":2}],21:[function(require,module,exports){
 "use strict";
 var portfolio_item_1 = require('../classes/portfolio-item');
 var title = "URL Shortener Microservice";
@@ -346,7 +360,7 @@ var repo = "https://github.com/MaxBoykoII/url-shortener";
 var caption = "A node app for shortening urls.";
 exports.urlShortener = new portfolio_item_1.PortfolioItem(title, svgURL, userStories, liveDemo, repo, caption);
 
-},{"../classes/portfolio-item":2}],21:[function(require,module,exports){
+},{"../classes/portfolio-item":2}],22:[function(require,module,exports){
 "use strict";
 var portfolio_item_1 = require('../classes/portfolio-item');
 var title = "Zipline: Build a Wikipedia Viewer";
@@ -359,10 +373,11 @@ var repo = 'http://codepen.io/MaxBoyko/pen/yYbReN';
 var caption = 'A Wikipedia viewer';
 exports.wiki = new portfolio_item_1.PortfolioItem(title, svgURL, userStories, liveDemo, repo, caption);
 
-},{"../classes/portfolio-item":2}],22:[function(require,module,exports){
+},{"../classes/portfolio-item":2}],23:[function(require,module,exports){
 "use strict";
 var bar_chart_1 = require('./portfolio-items/bar-chart');
 var scatterplot_1 = require('./portfolio-items/scatterplot');
+var heat_map_1 = require('./portfolio-items/heat-map');
 var calculator_1 = require('./portfolio-items/calculator');
 var simon_1 = require('./portfolio-items/simon');
 var wiki_1 = require('./portfolio-items/wiki');
@@ -382,6 +397,7 @@ var portfolioItems = [];
 exports.portfolioItems = portfolioItems;
 portfolioItems.push(bar_chart_1.barChart);
 portfolioItems.push(scatterplot_1.scatterplot);
+portfolioItems.push(heat_map_1.heatMap);
 portfolioItems.push(calculator_1.calculator);
 portfolioItems.push(simon_1.simon);
 portfolioItems.push(wiki_1.wiki);
@@ -398,7 +414,7 @@ portfolioItems.push(file_meta_1.fileMeta);
 portfolioItems.push(head_parser_1.headParser);
 portfolioItems.push(timestamp_1.timestamp);
 
-},{"./portfolio-items/bar-chart":5,"./portfolio-items/calculator":6,"./portfolio-items/file-meta":7,"./portfolio-items/head-parser":8,"./portfolio-items/img-search":9,"./portfolio-items/leaderboard":10,"./portfolio-items/markdown":11,"./portfolio-items/max-polls":12,"./portfolio-items/nightlife":13,"./portfolio-items/pomodoro":14,"./portfolio-items/scatterplot":15,"./portfolio-items/simon":16,"./portfolio-items/stock-sync":17,"./portfolio-items/tic-tac-toe":18,"./portfolio-items/timestamp":19,"./portfolio-items/url-shortener":20,"./portfolio-items/wiki":21}],23:[function(require,module,exports){
+},{"./portfolio-items/bar-chart":5,"./portfolio-items/calculator":6,"./portfolio-items/file-meta":7,"./portfolio-items/head-parser":8,"./portfolio-items/heat-map":9,"./portfolio-items/img-search":10,"./portfolio-items/leaderboard":11,"./portfolio-items/markdown":12,"./portfolio-items/max-polls":13,"./portfolio-items/nightlife":14,"./portfolio-items/pomodoro":15,"./portfolio-items/scatterplot":16,"./portfolio-items/simon":17,"./portfolio-items/stock-sync":18,"./portfolio-items/tic-tac-toe":19,"./portfolio-items/timestamp":20,"./portfolio-items/url-shortener":21,"./portfolio-items/wiki":22}],24:[function(require,module,exports){
 "use strict";
 exports.frontEndSkills = [
     'JavaScript',
@@ -510,7 +526,7 @@ exports.educationPluralSightAssements = [
     '<img class="img-responsive" src="./images/icons/css.png" alt="CSS"/> &mdash; 156 • proficient • 56<sup>th</sup> percentile'
 ];
 
-},{}],24:[function(require,module,exports){
+},{}],25:[function(require,module,exports){
 /*eslint-disable no-unused-vars*/
 /*!
  * jQuery JavaScript Library v3.1.0
@@ -10586,7 +10602,7 @@ if ( !noGlobal ) {
 return jQuery;
 } );
 
-},{}],25:[function(require,module,exports){
+},{}],26:[function(require,module,exports){
 (function (global){
 /**
  * @license
