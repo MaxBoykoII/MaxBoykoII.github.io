@@ -67,6 +67,7 @@ img.img-svg {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-justify-content: center;
   color: #fff;
   height: 50px;
   width: 50px;
