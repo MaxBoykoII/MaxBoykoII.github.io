@@ -112,6 +112,7 @@ export const educationCodeSchool = [
  
 export const educationPluralSightAssements= [
     '<img class="img-responsive" src="./images/icons/javascript.png" alt="JavaScript"/> &mdash; 199 • proficient • 80<sup>th</sup> percentile',
+    '<img class="img-responsive" src="./images/icons/node.png" alt="Node"/> &mdash; 206 • Expert • 83<sup>th</sup> percentile',
     '<img class="img-responsive" src="./images/icons/html5.png" alt="HTML5"/> &mdash; 197 • proficient • 79<sup>th</sup> percentile',
     '<img class="img-responsive" src="./images/icons/angular.png" alt="AngularJS"/> &mdash; 197 • proficient • 79<sup>th</sup> percentile',
     '<img class="img-responsive" src="./images/icons/css.png" alt="CSS"/> &mdash; 156 • proficient • 56<sup>th</sup> percentile'
