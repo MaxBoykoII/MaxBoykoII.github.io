@@ -4,6 +4,7 @@ import { PortfolioItem } from './classes/portfolio-item';
  * Import each data visualization project
  */
 import { barChart } from './portfolio-items/bar-chart';
+import { nationalContiguity } from './portfolio-items/national-contiguity';
 import { scatterplot } from './portfolio-items/scatterplot';
 import { heatMap } from './portfolio-items/heat-map';
 
@@ -41,6 +42,7 @@ let portfolioItems: PortfolioItem[] = [];
  * Data visualization projects
  */
 portfolioItems.push(barChart);
+portfolioItems.push(nationalContiguity);
 portfolioItems.push(scatterplot);
 portfolioItems.push(heatMap);
 

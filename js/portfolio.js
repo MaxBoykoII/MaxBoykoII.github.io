@@ -1,5 +1,6 @@
 "use strict";
 var bar_chart_1 = require('./portfolio-items/bar-chart');
+var national_contiguity_1 = require('./portfolio-items/national-contiguity');
 var scatterplot_1 = require('./portfolio-items/scatterplot');
 var heat_map_1 = require('./portfolio-items/heat-map');
 var calculator_1 = require('./portfolio-items/calculator');
@@ -20,6 +21,7 @@ var timestamp_1 = require('./portfolio-items/timestamp');
 var portfolioItems = [];
 exports.portfolioItems = portfolioItems;
 portfolioItems.push(bar_chart_1.barChart);
+portfolioItems.push(national_contiguity_1.nationalContiguity);
 portfolioItems.push(scatterplot_1.scatterplot);
 portfolioItems.push(heat_map_1.heatMap);
 portfolioItems.push(calculator_1.calculator);
